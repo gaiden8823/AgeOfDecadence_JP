@@ -1,0 +1,6 @@
+{
+  "translations": "../translations",
+  "state": "state",
+  "builds": "../builds",
+  "backups": "../backups"
+}

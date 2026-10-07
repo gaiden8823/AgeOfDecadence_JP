@@ -1,0 +1,442 @@
+AoD_GLOSSARY_ITEMS
+
+
+
+
+Age of Decadence 日本語化 — アイテム名称用語集
+
+
+
+
+運用方針
+- アイテム名称の原文正本は itemtext.english.xml。
+- AoD_GLOSSARY は人物・地名・組織・役職・設定語などのコア用語を管理する。
+- この分冊は武器、防具、衣服、薬品、素材、錬金素材、護符、外套、兜、指輪、工具、モジュール、盾、宝石・高級品、クエストアイテム、鍵、パワーアーマー等のプレイヤー向け名称を管理する。
+- 複合名称に含まれる人物名・地名・組織名・設定語は AoD_GLOSSARY の訳を継承する。同じ分冊内に基礎となるアイテム名が登録済みの場合は、そのアイテム訳も継承し、notes では `item inheritance` として区別する。
+- 登録基準・status/handling の定義は AoD_STYLE_GUIDE と AoD_GLOSSARY の運用ルールを継承する。
+- approved はユーザーが明示承認した訳にのみ使用する。
+- 現時点では原文インベントリを先に登録し、未確定訳は hold / review_required とする。既存コア用語集との照合後に review/draft へ昇格する。
+- DEV系、Undefined Item、<info>、Desc が Dev Item の内部用項目は除外。
+- 同名アイテムは source_term を1件に統合し、notes に全IDを保持する。
+
+
+
+
+列: source_term | target_term | status | provenance | handling | notes
+
+
+
+
+## 武器
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Jambia | ジャンビーヤ | draft | project | fixed | itemtext ID: 100
+Sefet | セフェト | draft | project | fixed | itemtext ID: 101
+Pugio | プギオ | draft | project | fixed | itemtext ID: 102
+Khanjar | ハンジャル | draft | project | fixed | itemtext ID: 103
+Yatagan | ヤタガン | draft | project | fixed | itemtext ID: 104
+Gladius | グラディウス | draft | project | fixed | itemtext ID: 110
+Khopesh | コペシュ | draft | project | fixed | itemtext ID: 111
+Handar | ハンダル | draft | project | fixed | itemtext ID: 112
+Shamshir | シャムシール | draft | project | fixed | itemtext ID: 113
+Scimitar | シミター | draft | project | fixed | itemtext ID: 114
+Zaghnal | ザグナル | draft | project | fixed | itemtext ID: 120
+Skeggox | スケゴックス | draft | project | fixed | itemtext ID: 121
+Mineb | ミネブ | draft | project | fixed | itemtext ID: 122
+Shadhavar | シャダヴァル | draft | project | fixed | itemtext ID: 123
+Labrys | ラブリュス | draft | project | fixed | itemtext ID: 124
+Pickaxe | つるはし | draft | project | fixed | itemtext ID: 125
+Marculus | マルクルス | draft | project | fixed | itemtext ID: 130
+Mallet | 木槌 | draft | project | fixed | itemtext ID: 131
+Spiked club | スパイク付き棍棒 | draft | project | fixed | itemtext ID: 132
+War hammer | 戦槌 | draft | project | fixed | itemtext ID: 133; cross-category note: Hammer→鈍器 is the skill-category term and is not inherited mechanically into this item name
+Sledgehammer | 大槌 | draft | project | fixed | itemtext ID: 134
+Wooden Stick | 木の棒 | draft | project | fixed | itemtext ID: 135
+Hasta | ハスタ | draft | project | fixed | itemtext ID: 140
+Dori | ドリ | draft | project | fixed | itemtext ID: 141
+Romach | ロマク | draft | project | fixed | itemtext ID: 142
+Krokspar | クロクスパル | draft | project | fixed | itemtext ID: 143
+Trident | 三叉槍 | draft | project | fixed | itemtext ID: 144
+Shovel | シャベル | draft | project | fixed | itemtext ID: 145
+Short Bow | 短弓 | draft | project | fixed | itemtext ID: 150; core inheritance: Bow→弓 [draft/fixed]
+Recurved Ordu Bow | オルドゥ反曲弓 | draft | project | fixed | itemtext ID: 151; core inheritance: Ordu→オルドゥ [draft/contextual]; Bow→弓 [draft/fixed]
+Kemetian Bow | ケメト弓 | draft | project | fixed | itemtext ID: 152; core inheritance: Bow→弓 [draft/fixed]
+Recurved Scythian Bow | スキタイ反曲弓 | draft | project | fixed | itemtext ID: 153; core inheritance: Bow→弓 [draft/fixed]
+Long Bow | 長弓 | draft | project | fixed | itemtext ID: 154; core inheritance: Bow→弓 [draft/fixed]
+Hand Crossbow | ハンドクロスボウ | draft | project | fixed | itemtext ID: 160; core inheritance: Crossbow→クロスボウ [approved/fixed]
+Standard Crossbow | 標準型クロスボウ | draft | project | fixed | itemtext ID: 161; core inheritance: Crossbow→クロスボウ [approved/fixed]
+Repeating Crossbow | 連発式クロスボウ | draft | project | fixed | itemtext ID: 162; core inheritance: Crossbow→クロスボウ [approved/fixed]
+Double Crossbow | 二連式クロスボウ | draft | project | fixed | itemtext ID: 163; core inheritance: Crossbow→クロスボウ [approved/fixed]
+Heavy Crossbow | 重クロスボウ | draft | project | fixed | itemtext ID: 164; core inheritance: Crossbow→クロスボウ [approved/fixed]
+Scoped Standard Crossbow | スコープ付き標準型クロスボウ | draft | project | fixed | itemtext ID: 165; core inheritance: Crossbow→クロスボウ [approved/fixed]
+Scoped Heavy Crossbow | スコープ付き重クロスボウ | draft | project | fixed | itemtext ID: 166; core inheritance: Crossbow→クロスボウ [approved/fixed]
+Karda | カルダ | draft | project | fixed | itemtext ID: 170
+Plumbata | プルンバタ | draft | project | fixed | itemtext ID: 171
+Chakram | チャクラム | draft | project | fixed | itemtext ID: 172
+Handox | ハンドックス | draft | project | fixed | itemtext ID: 173
+Pilum | ピルム | draft | project | fixed | itemtext ID: 174
+Net | 投網 | draft | project | fixed | itemtext ID: 175
+Stone | 投石 | draft | project | fixed | itemtext ID: 179
+Bolas | ボーラ | draft | project | fixed | itemtext ID: 180
+Acid Vial | 酸の小瓶 | draft | project | fixed | itemtext ID: 190; dialogue/general term `acid` is translated as「酸」in Work; common noun acid is not a core glossary term; inventory item name remains independently unresolved here
+Acid Vial (Strong) | 酸の小瓶（強力） | draft | project | fixed | itemtext ID: 191; variant of Acid Vial; base inventory item name remains unresolved
+Acid Vial (Splash) | 酸の小瓶（飛散） | draft | project | fixed | itemtext ID: 192; variant of Acid Vial; base inventory item name remains unresolved
+Liquid Fire Vial | 火炎液の小瓶 | draft | project | fixed | itemtext ID: 200; core inheritance: liquid fire→火炎液 [approved/fixed]
+Liquid Fire Vial (Strong) | 火炎液の小瓶（強力） | draft | project | fixed | itemtext ID: 201; core inheritance: liquid fire→火炎液 [approved/fixed]
+Liquid Fire Vial (Burning) | 火炎液の小瓶（燃焼） | draft | project | fixed | itemtext ID: 202; core inheritance: liquid fire→火炎液 [approved/fixed]
+Black Powder Bomb | 黒色火薬爆弾 | draft | project | fixed | itemtext ID: 210; dialogue plural `black powder bombs`; same inventory item family, no separate core entry
+Black Powder Bomb (Strong) | 黒色火薬爆弾（強力） | draft | project | fixed | itemtext ID: 211
+Black Powder Bomb (Frag) | 黒色火薬爆弾（破片） | draft | project | fixed | itemtext ID: 212
+Lion's Claw | 獅子の爪 | draft | project | fixed | itemtext ID: 115
+The Bringer of Storms | 嵐を呼ぶもの | draft | project | fixed | itemtext ID: 116
+Dreamweaver | 夢織り | approved | user | fixed | itemtext ID: 117; 2026-09-28ユーザー確定「夢織り」。
+The Pendulum of Judgement | 審判の振り子 | approved | user | fixed | itemtext ID: 126; 2026-09-28ユーザー確定「審判の振り子」。
+Old Faithful | 古き相棒 | approved | user | fixed | itemtext ID: 155; 2026-09-28ユーザー確定「古き相棒」。
+The Chopper | ぶった斬り | approved | user | fixed | itemtext ID: 118; 2026-09-28ユーザー確定「ぶった斬り」。
+The Bolter | ボルター | draft | project | fixed | itemtext ID: 167
+The Perforator | 穿つもの | approved | user | fixed | itemtext ID: 136; 2026-09-28ユーザー確定「穿つもの」。
+The Arbiter | 裁定者 | approved | user | fixed | itemtext ID: 105; 2026-09-28ユーザー確定「裁定者」。
+Black Dow | ブラック・ダウ | draft | project | fixed | itemtext ID: 127
+Pax Deorum | 神々の平和 | approved | user | fixed | itemtext ID: 146; 2026-09-28ユーザー確定「神々の平和」。
+Qantari Sword | カンターリの剣 | draft | project | fixed | itemtext ID: 119
+Qantari Axe | カンターリの斧 | draft | project | fixed | itemtext ID: 128
+Qantari War Club | カンターリの戦棍 | draft | project | fixed | itemtext ID: 137; core inheritance: Qantari→カンターリ [review/contextual]
+Vindicator | 潔白の証 | approved | user | fixed | itemtext ID: 147; 2026-09-28ユーザー確定「潔白の証」。
+That Which Kills | 殺すもの | draft | project | fixed | itemtext ID: 138
+Mysterious contraption | 謎の仕掛け | draft | project | fixed | itemtext ID: 2240,213
+Kadmos' Skewer | カドモスの串刺し | draft | project | fixed | itemtext ID: 148; core inheritance: Kadmos→カドモス [draft/fixed]
+
+
+
+
+## 矢弾
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Regular Missile | 通常弾 | draft | project | fixed | itemtext ID: 300
+Armor Piercing Missile | 徹甲弾 | draft | project | fixed | itemtext ID: 301
+Barbed Missile | 返し付き弾 | draft | project | fixed | itemtext ID: 302
+
+
+
+
+## 防具・衣服
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Leather Armor | 革鎧 | draft | project | fixed | itemtext ID: 400
+Reinforced Leather Armor | 強化革鎧 | draft | project | fixed | itemtext ID: 401
+Leather Barbari Armor | バルバリ革鎧 | draft | project | fixed | itemtext ID: 402
+Studded Barbari Armor | 鋲付きバルバリ鎧 | draft | project | fixed | itemtext ID: 403
+Silk Ordu Armor | オルドゥ絹鎧 | draft | project | fixed | itemtext ID: 404,405; core inheritance: Ordu→オルドゥ [draft/contextual]
+Leather Numeri Armor | ヌーメリ革鎧 | draft | project | fixed | itemtext ID: 406
+Studded Numeri Armor | 鋲付きヌーメリ鎧 | draft | project | fixed | itemtext ID: 407
+Manica | マニカ | draft | project | fixed | itemtext ID: 408
+Auxiliary Armor | 補助兵用鎧 | draft | project | fixed | itemtext ID: 409
+Phrygian Armor | フリュギア鎧 | draft | project | fixed | itemtext ID: 410
+Leather Ordu Armor | オルドゥ革鎧 | draft | project | fixed | itemtext ID: 411
+Studded Ordu Armor | 鋲付きオルドゥ鎧 | draft | project | fixed | itemtext ID: 412
+Lorica Segmentata | ロリカ・セグメンタタ | draft | project | fixed | itemtext ID: 413
+Lorica Musculata | ロリカ・ムスクラータ | draft | project | fixed | itemtext ID: 414
+Praetorian Armor | プラエトリアン鎧 | draft | project | fixed | itemtext ID: 415
+Lamellar Ordu Armor | オルドゥ・ラメラー鎧 | draft | project | fixed | itemtext ID: 416
+Imperial Armor | 帝国鎧 | draft | project | fixed | itemtext ID: 417; core inheritance: Imperial→帝国 [draft/contextual]
+Daratan Lorica Segmentata | ダラタン家のロリカ・セグメンタタ | draft | project | fixed | itemtext ID: 420; item inheritance: Lorica Segmentata→ロリカ・セグメンタタ [draft/fixed]; core inheritance: Daratan ← House Daratan→ダラタン家 [review/fixed]
+Daratan Praetorian Armor | ダラタン家のプラエトリアン鎧 | draft | project | fixed | itemtext ID: 421; item inheritance: Praetorian Armor→プラエトリアン鎧 [draft/fixed]; core inheritance: Daratan ← House Daratan→ダラタン家 [review/fixed]
+Raider Armor | 襲撃者の鎧 | draft | project | fixed | itemtext ID: 422
+Imperial Guards Lorica Segmentata | 帝国衛兵団のロリカ・セグメンタタ | draft | project | fixed | itemtext ID: 423; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]; item inheritance: Lorica Segmentata→ロリカ・セグメンタタ [draft/fixed]
+Imperial Guards Imperial Armor | 帝国衛兵団の帝国鎧 | draft | project | fixed | itemtext ID: 424; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Tunic | チュニック | draft | project | fixed | itemtext ID: 500
+Light Tunic | 軽装チュニック | draft | project | fixed | itemtext ID: 501
+Toga | トガ | draft | project | fixed | itemtext ID: 502
+Long Toga | 長トガ | draft | project | fixed | itemtext ID: 503
+Slave Garb | 奴隷の衣服 | draft | project | fixed | itemtext ID: 504
+Expensive Long Robe | 高価な長衣 | draft | project | fixed | itemtext ID: 505
+Expensive Robe | 高価なローブ | draft | project | fixed | itemtext ID: 506
+Long Robe | 長衣 | draft | project | fixed | itemtext ID: 507
+Short Robe | 短衣 | draft | project | fixed | itemtext ID: 508
+Noble Clothes | 貴族服 | draft | project | fixed | itemtext ID: 509
+Noble Dress | 貴婦人のドレス | draft | project | fixed | itemtext ID: 510
+Odalisque's Garb | オダリスクの衣装 | draft | project | fixed | itemtext ID: 511
+Desert Garments | 砂漠の装束 | draft | project | fixed | itemtext ID: 512
+Loremaster's Garments | 伝承学者の装束 | draft | project | fixed | itemtext ID: 513; core inheritance: Loremaster→伝承学者 [review/fixed]
+Merchant Robe | 商人のローブ | draft | project | fixed | itemtext ID: 514; core inheritance: Merchant→商人 [draft/fixed]
+Dirty Tunic | 汚れたチュニック | draft | project | fixed | itemtext ID: 515
+The Blue Cuirass | 青の胸甲 | draft | project | fixed | itemtext ID: 430
+Darius’ Armor | ダリウスの鎧 | draft | project | fixed | itemtext ID: 431; core inheritance: Darius→ダリウス [draft/fixed]
+Honor-Bound | 名誉の誓い | approved | user | fixed | itemtext ID: 432; 2026-09-28ユーザー確定「名誉の誓い」。
+Mangudai Ordu Armor | マングダイ・オルドゥ鎧 | draft | project | fixed | itemtext ID: 433; core inheritance: Ordu→オルドゥ [draft/contextual]
+Zagros' Armguard | ザグロスの腕甲 | draft | project | fixed | itemtext ID: 434; core inheritance: Zagros→ザグロス [draft/fixed]
+Lorica Hamata | ロリカ・ハマタ | draft | project | fixed | itemtext ID: 425
+
+
+
+
+## ポーション・薬品
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Healing Salve | 治癒軟膏 | draft | project | fixed | itemtext ID: 801
+Restorative Liniment | 回復塗布薬 | draft | project | fixed | itemtext ID: 802
+Regeneration Potion | 再生薬 | draft | project | fixed | itemtext ID: 803
+Berserk Potion | 狂戦薬 | draft | project | fixed | itemtext ID: 804; dialogue term `berserk draught` is currently「狂戦薬」in Work; inventory item name remains independently unresolved here
+Berserk Potion (Extended) | 狂戦薬（持続） | draft | project | fixed | itemtext ID: 805
+Berserk Potion (Hemostasis) | 狂戦薬（止血） | draft | project | fixed | itemtext ID: 806
+Neurostimulant | 神経刺激薬 | draft | project | fixed | itemtext ID: 807; dialogue plural `neurostimulators` is currently「神経刺激剤」in Work; inventory item name remains independently unresolved here
+Neurostimulant (Extended) | 神経刺激薬（持続） | draft | project | fixed | itemtext ID: 808
+Neurostimulant (Eagle Eye) | 神経刺激薬（鷲の眼） | draft | project | fixed | itemtext ID: 809
+Poison Vial | 毒の小瓶 | draft | project | fixed | itemtext ID: 810
+Antidote | 解毒剤 | draft | project | fixed | itemtext ID: 811
+Poison Vial (Potent) | 毒の小瓶（強力） | draft | project | fixed | itemtext ID: 812
+
+
+
+
+## 護符
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+The Eye of Thor-Agoth | トール＝アゴスの眼 | draft | project | fixed | itemtext ID: 900
+Prospector's Amulet | 探鉱者の護符 | draft | project | fixed | itemtext ID: 901
+Respirator | 呼吸器 | draft | project | fixed | itemtext ID: 902,904
+Strange Mask | 奇妙な仮面 | draft | project | fixed | itemtext ID: 903
+Snake Pendant | 蛇のペンダント | draft | project | fixed | itemtext ID: 905
+Pebble Necklace | 小石の首飾り | draft | project | fixed | itemtext ID: 906
+Protection Amulet | 守護の護符 | draft | project | fixed | itemtext ID: 907
+Demon's Eye charm | 悪魔の眼の護符 | draft | project | fixed | itemtext ID: 908
+Charged Respirator | 充填済み呼吸器 | draft | project | fixed | itemtext ID: 909; item inheritance: Respirator→呼吸器 [draft/fixed]
+
+
+
+
+## 外套
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Simple cape | 簡素な外套 | draft | project | fixed | itemtext ID: 1000
+Raider Cape | 襲撃者の外套 | draft | project | fixed | itemtext ID: 1050
+Imperial Guards Cape | 帝国衛兵団の外套 | draft | project | fixed | itemtext ID: 1051; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+House Aurelian Cape | アウレリアン家の外套 | draft | project | fixed | itemtext ID: 1052; core inheritance: House Aurelian→アウレリアン家 [review/fixed]
+Centurion's cape | 百人隊長の外套 | draft | project | fixed | itemtext ID: 1001; core inheritance: Centurion→百人隊長 [review/fixed]
+Traveler's cape | 旅人の外套 | draft | project | fixed | itemtext ID: 1002
+Noble's cape | 貴族の外套 | draft | project | fixed | itemtext ID: 1003
+
+
+
+
+## 兜・頭装備
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Hood | 頭巾 | draft | project | fixed | itemtext ID: 1100
+Leather Barbari Helmet | バルバリ革兜 | draft | project | fixed | itemtext ID: 1101
+Heavy Barbari Helmet | 重装バルバリ兜 | draft | project | fixed | itemtext ID: 1102
+Silk Ordu Helmet | オルドゥ絹兜 | draft | project | fixed | itemtext ID: 1103,1104; core inheritance: Ordu→オルドゥ [draft/contextual]
+Leather Numeri Helmet | ヌーメリ革兜 | draft | project | fixed | itemtext ID: 1105
+Heavy Numeri Helmet | 重装ヌーメリ兜 | draft | project | fixed | itemtext ID: 1106
+Murmillo Helmet | ムルミッロ兜 | draft | project | fixed | itemtext ID: 1107; core inheritance: murmillo→ムルミッロ [review/fixed]
+Auxiliary Helmet | 補助兵用兜 | draft | project | fixed | itemtext ID: 1108
+Phrygian Helmet | フリュギア兜 | draft | project | fixed | itemtext ID: 1109
+Leather Ordu Helmet | オルドゥ革兜 | draft | project | fixed | itemtext ID: 1110,1111; core inheritance: Ordu→オルドゥ [draft/contextual]
+Studded Ordu Helmet | 鋲付きオルドゥ兜 | draft | project | fixed | itemtext ID: 1112,1113; core inheritance: Ordu→オルドゥ [draft/contextual]
+Legionnaire helmet | 軍団兵の兜 | draft | project | fixed | itemtext ID: 1114
+Attic Helmet | アッティカ式兜 | draft | project | fixed | itemtext ID: 1115
+Centurion Helmet | 百人隊長の兜 | draft | project | fixed | itemtext ID: 1116; core inheritance: Centurion→百人隊長 [review/fixed]
+Praetorian Helmet | プラエトリアン兜 | draft | project | fixed | itemtext ID: 1117
+Lamellar Ordu Helmet | オルドゥ・ラメラー兜 | draft | project | fixed | itemtext ID: 1119; core inheritance: Ordu→オルドゥ [draft/contextual]
+Imperial Helmet | 帝国兜 | draft | project | fixed | itemtext ID: 1120; core inheritance: Imperial→帝国 [draft/contextual]
+Open Hood | 開放型頭巾 | draft | project | fixed | itemtext ID: 1121
+Simple Turban | 簡素なターバン | draft | project | fixed | itemtext ID: 1200
+Simple Hood | 簡素な頭巾 | draft | project | fixed | itemtext ID: 1201
+Expensive Turban | 高価なターバン | draft | project | fixed | itemtext ID: 1202
+Expensive Hood | 高価な頭巾 | draft | project | fixed | itemtext ID: 1203
+Noble's Turban | 貴族のターバン | draft | project | fixed | itemtext ID: 1204
+Odalisque Headdress | オダリスクの頭飾り | draft | project | fixed | itemtext ID: 1205
+Loremaster's Turban | 伝承学者のターバン | draft | project | fixed | itemtext ID: 1206; core inheritance: Loremaster→伝承学者 [review/fixed]
+Loremaster's Hood | 伝承学者の頭巾 | draft | project | fixed | itemtext ID: 1207; core inheritance: Loremaster→伝承学者 [review/fixed]
+Iskefe | イスケフェ | approved | user | fixed | itemtext ID: 1208; 2026-09-28ユーザー確定「イスケフェ」。
+Wolf helmet | 狼の兜 | draft | project | fixed | itemtext ID: 1129
+Zagros' Helmet | ザグロスの兜 | draft | project | fixed | itemtext ID: 1130; core inheritance: Zagros→ザグロス [draft/fixed]
+Warrior's Crown | 戦士の冠 | draft | project | fixed | itemtext ID: 1132
+
+
+
+
+## 指輪
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Gold Ring | 金の指輪 | draft | project | fixed | itemtext ID: 1300
+Ruby Ring | ルビーの指輪 | draft | project | fixed | itemtext ID: 1310
+Daratan Ring | ダラタン家の指輪 | draft | project | fixed | itemtext ID: 1330; core inheritance: Daratan ← House Daratan→ダラタン家 [review/fixed]
+Galbo's Ring | ガルボの指輪 | draft | project | fixed | itemtext ID: 1350
+Commercium Ring | コメルキウムの指輪 | draft | project | fixed | itemtext ID: 1335; core inheritance: Commercium→コメルキウム [review/fixed]
+Tower Ring | 塔の指輪 | approved | user | fixed | itemtext ID: 1355; 2026-09-28ユーザー確定「塔の指輪」。
+
+
+
+
+## 素材
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Metal | 金属 | draft | project | fixed | itemtext ID: 1400
+Leather | 革 | draft | project | fixed | itemtext ID: 1401
+Lumber | 木材 | draft | project | fixed | itemtext ID: 1402
+Cloth | 布 | draft | project | fixed | itemtext ID: 1403
+Hardened Leather | 硬化革 | draft | project | fixed | itemtext ID: 1404
+
+
+
+
+## 工具
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Whetstone | 砥石 | draft | project | fixed | itemtext ID: 1500
+
+
+
+
+## モジュール
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Module | モジュール | draft | project | fixed | itemtext ID: 1600
+Large Module | 大型モジュール | draft | project | fixed | itemtext ID: 1610
+
+
+
+
+## 盾
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Buckler | バックラー | draft | project | fixed | itemtext ID: 1700
+Cavalry shield | 騎兵盾 | draft | project | fixed | itemtext ID: 1701
+Infantry shield | 歩兵盾 | draft | project | fixed | itemtext ID: 1702
+Tower Shield | タワーシールド | draft | project | fixed | itemtext ID: 1703
+Buckler - Imperial Guards | 帝国衛兵団のバックラー | draft | project | fixed | itemtext ID: 1710; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Cavalry shield - Imperial Guards | 帝国衛兵団の騎兵盾 | draft | project | fixed | itemtext ID: 1711; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Infantry shield - Imperial Guards | 帝国衛兵団の歩兵盾 | draft | project | fixed | itemtext ID: 1712; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Tower Shield - Imperial Guards | 帝国衛兵団のタワーシールド | draft | project | fixed | itemtext ID: 1713; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Impenetrable | 不落 | approved | user | fixed | itemtext ID: 1750; 2026-09-28ユーザー確定「不落」。
+Swordbreaker | 剣砕き | approved | user | fixed | itemtext ID: 1751; 2026-09-28ユーザー確定「剣砕き」。
+
+
+
+
+## 錬金素材
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Cassava Root | キャッサバの根 | draft | project | fixed | itemtext ID: 1800; dialogue form `Cassava roots`; same inventory item/material, no separate core `Cassava` entry
+Goldenberry | 黄金の実 | draft | project | fixed | itemtext ID: 1801
+Amaranthus Extract | アマランサス抽出物 | draft | project | fixed | itemtext ID: 1802; dialogue alias `Extract of Amaranthus`; same item/object, dialogue target must inherit this item translation; no separate core entry
+Blood Mushroom | 血茸 | draft | project | fixed | itemtext ID: 1803; dialogue form `dried blood mushroom` is currently「乾燥血茸」in Work; treat as a contextual form of this ingredient, not a separate core glossary entry
+Emoryl Root | エモリルの根 | draft | project | fixed | itemtext ID: 1804
+Fennah Berries | フェンナの実 | draft | project | fixed | itemtext ID: 1805
+Quicksilver Roots | クイックシルバーの根 | draft | project | fixed | itemtext ID: 1806
+Dragon's Blood Extract | 竜の血の抽出物 | draft | project | fixed | itemtext ID: 1807
+Kadura Leaves | カドゥラの葉 | draft | project | fixed | itemtext ID: 1808
+Avatera Sprouts | アヴァテラの芽 | draft | project | fixed | itemtext ID: 1809
+Sulfur | 硫黄 | draft | project | fixed | itemtext ID: 1810
+Salt Petrae | 硝石 | draft | project | fixed | itemtext ID: 1811
+Fools' Gold | 愚者の金 | draft | project | fixed | itemtext ID: 1812
+Rock Oil | 岩油 | draft | project | fixed | itemtext ID: 1813
+Quicklime | 生石灰 | draft | project | fixed | itemtext ID: 1814
+Black Powder | 黒色火薬 | draft | project | fixed | itemtext ID: 1815
+Iron Balls | 鉄球 | draft | project | fixed | itemtext ID: 1816
+
+
+
+
+## 宝石・高級品
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Diamond | ダイヤモンド | draft | project | fixed | itemtext ID: 2000
+Emerald | エメラルド | draft | project | fixed | itemtext ID: 2001
+Ruby | ルビー | draft | project | fixed | itemtext ID: 2002
+Sapphire | サファイア | draft | project | fixed | itemtext ID: 2003
+Topaz | トパーズ | draft | project | fixed | itemtext ID: 2004
+Grey stone | 灰色の石 | draft | project | fixed | itemtext ID: 2005
+Lodestone | 天然磁石 | draft | project | fixed | itemtext ID: 2006
+Bronze Goblet | 青銅の杯 | draft | project | fixed | itemtext ID: 2010
+Silver Goblet | 銀の杯 | draft | project | fixed | itemtext ID: 2011
+Golden Goblet | 金の杯 | draft | project | fixed | itemtext ID: 2012
+Bronze Plate | 青銅の皿 | draft | project | fixed | itemtext ID: 2013
+Silver Plate | 銀の皿 | draft | project | fixed | itemtext ID: 2014
+Golden Plate | 金の皿 | draft | project | fixed | itemtext ID: 2015
+Yellow Sapphire | イエローサファイア | draft | project | fixed | itemtext ID: 2007
+
+
+
+
+## クエストアイテム
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Gracius' Map | グラキウスの地図 | draft | project | fixed | itemtext ID: 2100; core inheritance: Gracius→グラキウス [review/fixed]
+Astrolabe | アストロラーベ | approved | user | fixed | itemtext ID: 2105; dialogue variants: astrolabus / astrolabe; 2026-09-27ユーザー確定「アストロラーベ」に統一。
+Grooved sphere | 溝付き球体 | draft | project | fixed | itemtext ID: 2110
+Climbing hook | 登攀鉤 | draft | project | fixed | itemtext ID: 2115
+Rope | ロープ | draft | project | fixed | itemtext ID: 2120
+Rope with grappling hook | 鉤縄付きロープ | draft | project | fixed | itemtext ID: 2125
+Wine Amphora | ワインのアンフォラ | draft | project | fixed | itemtext ID: 2130
+Wine Amphora (poisoned) | ワインのアンフォラ（毒入り） | draft | project | fixed | itemtext ID: 2131
+Imperial Guards' Writ | 帝国衛兵団の令状 | draft | project | fixed | itemtext ID: 2140; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Imperial Guards' Mandate | 帝国衛兵団の通行令 | draft | project | fixed | itemtext ID: 2145; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Imperial Guards' Mandate (fake) | 帝国衛兵団の通行令（偽造） | draft | project | fixed | itemtext ID: 2146; core inheritance: Imperial Guards→帝国衛兵団 [review/fixed]
+Antique Golden Goblet | 宝石飾りの古い金杯 | draft | project | fixed | itemtext ID: 2150
+The "Jellyfish" Artefact | クラゲ型の遺物 | draft | project | fixed | itemtext ID: 2160
+Jar | 壺 | draft | project | fixed | itemtext ID: 2165
+The Helm of Destiny | 運命の兜 | draft | project | fixed | itemtext ID: 2170
+Silver Badge | 銀の徽章 | draft | project | fixed | itemtext ID: 2175,2178
+Steel badge | 鋼鉄の徽章 | draft | project | fixed | itemtext ID: 2176
+The Crimson Eye | 真紅の眼 | draft | project | fixed | itemtext ID: 2180
+Demon Core | 悪魔の核 | draft | project | fixed | itemtext ID: 2185
+Spies' Reports | 密偵の報告書 | draft | project | fixed | itemtext ID: 2135
+Golden Badge | 金の徽章 | draft | project | fixed | itemtext ID: 2177
+Metal glove | 金属製の手袋 | draft | project | fixed | itemtext ID: 2190
+Mysterious artefact | 謎の遺物 | approved | user | fixed | itemtext ID: 2195; 2026-09-28ユーザー確定「謎の遺物」。
+Senna's Letter | センナの書状 | draft | project | fixed | itemtext ID: 2200
+Mechanical Eye | 機械の眼 | draft | project | fixed | itemtext ID: 2205
+Air Valve | 空気弁 | draft | project | fixed | itemtext ID: 2201
+Oil Injector | 油噴射器 | draft | project | fixed | itemtext ID: 2202
+The Ghost Hand | 亡霊の手 | approved | user | fixed | itemtext ID: 2191; 2026-09-28ユーザー確定「亡霊の手」。
+The Ghost Hand (Charged) | 亡霊の手（充填済み） | approved | user | fixed | itemtext ID: 2192; item inheritance: The Ghost Hand→亡霊の手 [approved/fixed]; 2026-09-28ユーザー確定「亡霊の手（充填済み）」。
+Surgical Kit | 手術器具一式 | draft | project | fixed | itemtext ID: 2210
+Aegis of the Magi | 魔導士のアイギス | draft | project | fixed | itemtext ID: 2220; core inheritance: Aegis→アイギス [review/fixed]; Magi→魔導士 [review/contextual]
+The Divine Spear | 神槍 | draft | project | fixed | itemtext ID: 2230
+Medical Canister | 医療用薬剤容器 | draft | project | fixed | itemtext ID: 2250
+An ancient scroll | 古代の巻物 | draft | project | fixed | itemtext ID: 2155
+An ancient mantra | 古代のマントラ | draft | project | fixed | itemtext ID: 2156
+
+
+
+
+## 鍵
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Hellgate Key | ヘルゲートの鍵 | draft | project | fixed | itemtext ID: 2400; core inheritance: Hellgate→ヘルゲート [draft/fixed]
+Mining Outpost Key | 採掘前哨基地の鍵 | draft | project | fixed | itemtext ID: 2410
+Monastery Key | 修道院の鍵 | draft | project | fixed | itemtext ID: 2405
+Ganezzar Tunnels Key | ガネザール地下道の鍵 | draft | project | fixed | itemtext ID: 2415; core inheritance: Ganezzar→ガネザール [approved/fixed]
+
+
+
+
+## パワーアーマー
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Imperial Power Armor | 帝国パワーアーマー | draft | project | fixed | itemtext ID: 2500; core inheritance: Power Armor→パワーアーマー [draft/fixed]; Imperial→帝国 [draft/contextual]
+Apis Helmet | アピスの兜 | draft | project | fixed | itemtext ID: 2510
+Anubis Helmet | アヌビスの兜 | draft | project | fixed | itemtext ID: 2511
+Horus Helmet | ホルスの兜 | draft | project | fixed | itemtext ID: 2512
+Ra Helmet | ラーの兜 | draft | project | fixed | itemtext ID: 2513
+Imperial Power Armor Gauntlet | 帝国パワーアーマーの篭手 | draft | project | fixed | itemtext ID: 2505; core inheritance: Power Armor→パワーアーマー [draft/fixed]; Imperial→帝国 [draft/contextual]
+Imperial Power Armor (Charged) | 帝国パワーアーマー（充填済み） | draft | project | fixed | itemtext ID: 2501; core inheritance: Power Armor→パワーアーマー [draft/fixed]; Imperial→帝国 [draft/contextual]
+
+
+
+
+## 通貨
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Gold | 金 | draft | project | fixed | itemtext ID: 10501
+
+
+
+
+## 特殊
+source_term | target_term | status | provenance | handling | notes
+--- | --- | --- | --- | --- | ---
+Fists | 拳 | approved | user | fixed | itemtext ID: 10502; 2026-09-28ユーザー確定「拳」。
+

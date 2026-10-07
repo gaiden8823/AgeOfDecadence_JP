@@ -1,0 +1,23 @@
+# Allowlist: game binaries, extracted assets and backups must never be committed.
+/*
+!/.gitignore
+!/README.md
+!/tools/
+/tools/*
+!/tools/aod_self_service.py
+!/tools/dso48.py
+!/tools/build_full_dialogues.py
+!/tools/test_self_service.py
+!/tools/aod_layout.json
+!/tools/aod_tool.cmd
+!/tools/日本語化ツール.cmd
+!/tools/使い方.md
+!/translations/
+/translations/*
+!/translations/reviewed_translation_targets.csv
+!/translations/image_translation_targets.csv
+!/translations/dialogue_translation.csv
+!/guides/
+/guides/*
+!/guides/*.txt
+# Images include original game textures; review rights before adding individually.

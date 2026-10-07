@@ -1,0 +1,599 @@
+﻿AoD 日本語化 用語集
+再構築版 — 旧 AoD_GLOSSARY を上書きせず作成
+
+
+
+
+運用ルール
+この用語集は、用語の確定度・出典・文脈依存性を分離して管理する。
+列: source_term / target_term / status / provenance / handling / notes
+status: approved = ユーザー確定、review = 既訳・プロジェクト根拠あり要レビュー、draft = 暫定、hold = 未解決で統一対象に使用しない。
+approved への昇格はユーザーの明示承認時のみ行う。AI判断、既訳の使用頻度、機械的な多数決だけで approved に変更しない。
+優先順位は approved > review > draft。hold は順位付けせず、解決するまで統一基準から除外する。
+provenance: user / work / project / inherited。
+handling: fixed = 基本訳固定、contextual = 文脈ごとに訳し分け、review_required = 解決まで使用保留。
+全体QAでは approved + fixed を最も強い統一基準とする。review / draft は候補抽出に使えても自動確定しない。
+contextual は機械的一括置換禁止。hold / review_required は統一基準として使用しない。
+既存 target_ja は明示指示なしに自動上書きしない。
+Protected Token、角括弧タグ、technical_review の扱いは AoD_STYLE_GUIDE を正本とし、本用語集には重複記載しない。
+用語の登録対象・除外基準は AoD_STYLE_GUIDE「新規用語の登録ルール」を正本とする。
+アイテム名称は AoD_GLOSSARY_ITEMS を正本とし、本コア用語集へ同一アイテム名を重複登録しない。複合アイテム名に含まれる人物名・地名・組織名・設定語等の構成要素は本書で管理する。
+
+
+
+
+出自・職業
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Assassin | 暗殺者 | approved | user | fixed | 2026-09-19承認。旧暫定「刺客」は使用しない |
+| Praetor | プラエトル | approved | user | fixed | 2026-09-23ユーザー採用。旧訳「名家の家臣」は使用しない |
+| Thief | 盗賊 | approved | user | contextual | 2026-09-26ユーザー確定。出自名・職業・勢力名では「盗賊」。罵倒・呼びかけの “Thief!” など一般名詞は「盗人」等を許容。機械的一括置換禁止。 |
+| Loremaster | 伝承学者 | approved | user | fixed | Work用語集から継承。既訳本文の「古代知識師」はQA対象。2026-09-26ユーザー確定。出自名。 |
+| Grifter | 詐欺師 | approved | user | fixed | 2026-09-26ユーザー確定。出自名。 |
+| Drifter | 放浪者 | approved | user | fixed | 2026-09-26ユーザー確定。出自名。 |
+| Mercenary | 傭兵 | approved | user | fixed | 2026-09-26ユーザー確定。出自名。 |
+| Merchant | 商人 | approved | user | fixed | 2026-09-26ユーザー確定。出自名。 |
+
+
+
+
+能力値
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Strength | 筋力（STR） | approved | user | fixed |  |
+| Dexterity | 敏捷力（DEX） | approved | user | fixed |  |
+| Constitution | 体力（CON） | approved | user | fixed |  |
+| Perception | 知覚（PER） | approved | user | fixed |  |
+| Intelligence | 知力（INT） | approved | user | fixed |  |
+| Charisma | 魅力（CHA） | approved | user | fixed |  |
+
+
+
+
+技能
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Dagger | 短剣 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Sword | 剣 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Axe | 斧 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Hammer | 鈍器 | approved | user | fixed | ハンマー、棍棒、棒状打撃武器を含む |
+| Spear | 槍 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Bow | 弓 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Crossbow | クロスボウ | approved | user | fixed |  |
+| Throwing | 投擲 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Dodge | 回避 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Block | 盾防御 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Critical Strike | 致命打 | approved | user | fixed |  |
+| Lockpick | 解錠 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Sneak | 隠密 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Steal | 窃盗 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Traps | 罠 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Impersonate | なりすまし | approved | user | fixed |  |
+| Etiquette | 礼儀作法 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Persuasion | 説得 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Streetwise | 処世術 | approved | user | fixed |  |
+| Alchemy | 錬金術 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Crafting | 製作 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+| Lore | 伝承学 | approved | user | fixed | 技能・学問名。Workで明示的に技能名として使われる2件はいずれも「伝承学」で、うち1件は Etiquette / Streetwise と並列の技能名。Loremaster → 伝承学者とも整合する。[lore] / [lore success] / [lore failure] などのProtected Tokenは翻訳しない。 2026-09-26ユーザー確定。 |
+| Trading | 取引 | approved | user | fixed | 2026-09-26ユーザー確定。 |
+
+
+
+
+人物・組織・地名など
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Gracius | グラキウス | approved | user | fixed | 人名。既訳で表記一致。 2026-09-26ユーザー確定。 |
+| Merchants Guild | 商人ギルド | approved | user | fixed | 一般組織名。特定勢力 Commercium を説明的に指す場合もある。原文が `Merchants Guild` / `merchant guild` なら「商人ギルド」とし、一般論の複数形も「商人ギルド」。2026-09-26ユーザー確定。 |
+| Maadoran | マードラン | approved | user | fixed | 主要都市名。現行翻訳で統一。2026-09-26ユーザー確定。 |
+| Kemnebi | ケムネビ | approved | user | fixed | 人名。既訳で表記一致。 2026-09-26ユーザー確定。 |
+| Commercium | コメルキウム | approved | user | fixed | 固有組織名。実質的に商人ギルドであり、原文では同じ勢力を `merchant guild` と一般呼称する場合がある。原文が `Commercium` の場合は「コメルキウム」、一般呼称は「商人ギルド」と訳し分ける。2026-09-26ユーザー確定。 |
+| Forty Thieves guild | 四十人盗賊団 | approved | user | fixed | Work履歴で既存用語方針として確認。文脈上この組織を指す `Forty Thieves` / `the Thieves` は同組織として扱う。 2026-09-26ユーザー確定。 |
+| Cado | カド | approved | user | fixed | 人名。四十人盗賊団の顔役。 2026-09-26ユーザー確定。 |
+| Vardanis | ヴァルダニス | approved | user | fixed | 人名。既訳で表記一致。 2026-09-26ユーザー確定。 |
+| imperials | インペリアル | approved | user | fixed | 通貨名。現行翻訳では「インペリアル」で統一。 2026-09-27ユーザー確定。 |
+| Imperial Guards | 帝国衛兵団 | approved | user | fixed | 固有組織名。Work既訳で反復使用され一致。単数形 `Imperial Guard` も同一組織・所属兵を指す用法としてWorkで確認。別項目は作らず、本項目の形態変種として扱う。 2026-09-26ユーザー確定。 |
+| Feng | フェン | approved | user | fixed | 人名。伝承学者。 2026-09-26ユーザー確定。 |
+| Centurion | 百人隊長 | approved | user | fixed | Work既訳でも一致 2026-09-27ユーザー確定。 |
+| Ganezzar | ガネザール | approved | user | fixed | 主要都市名。2026-09-26ユーザー確定。公式の発音表記・音声根拠は未確認だが、日本語名としての語感を優先して「ガネザール」を採用。旧「ガネザー」はWork監査で統一対象とする。 |
+| Teron | テロン | approved | user | fixed | 主要都市名。2026-09-26ユーザー確定。Work照合では「テロン」230件に対し「テルオン」3件が残るため、後続Work監査で「テロン」へ統一対象。 |
+| Al-Akia | アル＝アキア | approved | user | fixed | 地名・古代施設名。2026-09-26ユーザー確定。 |
+| scolopendra | スコロペンドラ | approved | user | fixed | 本翻訳で使用中。 2026-09-27ユーザー確定。 |
+
+
+
+
+本翻訳で追加確認した人物・組織・地名・設定用語
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Qantari | カンターリ | approved | user | contextual | 民族・集団名としては「カンターリ」。人物・集団、言語、文化、技術などを修飾する場合は「カンターリの〜」「カンターリ語」等、文脈に応じて処理する。Work既訳の表記を優先。 2026-09-26ユーザー確定。 |
+| Aegir | エーギル | approved | user | fixed | 巨人の名 2026-09-26ユーザー確定。 |
+| Aegis | アイギス | approved | user | fixed | 古代防護装備に刻まれた固有名。Workでは `Aegis suit` / `Aegis armor` として複数イベントに再登場する。ギリシャ神話の防具名 Aegis の日本語慣用表記「アイギス」を採用し、装備・名称として固定する。 2026-09-26ユーザー確定。 |
+| Magi | 魔導士 | approved | user | contextual | 複数形／古代の魔導士集団。個人複数なら「魔導士たち」等、組織性が強い文脈では集団として処理。2026-09-26ユーザー確定。 |
+| Quintus Valerius Corvus | クィントゥス・ヴァレリウス・コルヴス | approved | user | fixed | 人名。2026-09-26ユーザー確定。Valerius→ヴァレリウス、Corvus→コルヴスをこの人名で採用。 |
+| High Magus | 大魔導士 | approved | user | fixed | `First of the Magi`（筆頭魔導士）とは別称号。2026-09-26ユーザー確定。 |
+| Legatus | 軍団長 | approved | user | fixed | 役職名。Workで standalone Legatus の表示対象259件中254件が「軍団長」、5件が旧暫定「レガトゥス」、technical_review 1件は未訳。Hagnon / Carbo / 主人公昇進後など同一の軍団指揮官役職として用いられ、Legatus Legionis → 軍団長とも整合する。既存target_jaは自動上書きせず、旧「レガトゥス」5件はWork監査で個別確認する。 2026-09-26ユーザー確定。 |
+| mechanus | メカヌス | draft | project | fixed | 役職・設定用語 |
+| Xenorath | ゼノラス | approved | user | fixed | 固有名詞 2026-09-26ユーザー確定。 |
+| Power / power | 動力／電力／エネルギー／力 | review | project | contextual | 技術文脈は「動力」「電力」「エネルギー」、抽象的・超自然的な力は「力」。旧「〈力〉」の機械的使用は禁止。 |
+| Decanus | 十人隊長 | approved | user | fixed | チャット追加語。Work既訳で反復使用される役職訳を優先。複数形 `Decanii` も同じ役職として「十人隊長」と扱う。 2026-09-26ユーザー確定。 |
+| Caer-Tor | カイル＝トール | approved | user | fixed | 地名。2026-09-26ユーザー確定。旧「カエル＝トール」は日本語で別語を連想しやすいため使用しない。 |
+| Legionary | 軍団兵 | approved | user | fixed | Work既訳で多数使用される軍事編制上の統一用語。 2026-09-26ユーザー確定。 |
+| Meru | メル | approved | user | fixed | 人名。Work既訳でも一致。 2026-09-26ユーザー確定。 |
+| Faelan | フェイラン | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| House Aurelian | アウレリアン家 | approved | user | fixed | チャット追加語。Work既訳で反復使用される表記を優先。 2026-09-26ユーザー確定。 |
+| Aurelian | アウレリアン | approved | user | contextual | House Aurelian は「アウレリアン家」。Aurelian は家名・一門への所属を示し、Aurelian soldiers / legionaries / army / the Aurelians などは「アウレリアン家の兵」「アウレリアン軍」「アウレリアン側」等、文脈に応じて訳す。「アウレリア家」とはしない。 |
+| House Crassus | クラッサス家 | approved | user | fixed | 2026-09-26ユーザー確定。Crassus は「クラッサス」で統一。 |
+| Serenas | セレナス | approved | user | fixed | 人名。Work既訳でも一致。 2026-09-26ユーザー確定。 |
+
+
+
+
+| Balzaar | バルザール | approved | user | fixed | 神格名。同一存在の古称・異称として Baal-Zurath / Baalzurath 系表記がある。 2026-09-26ユーザー確定。 |
+| Agathoth | アガトス | approved | user | fixed | 神格名。Work実データで「アガトス」110件に対し既存 target_ja/review「アガトート」1件。さらに Quest_Zamedi_04 で古い呼称として `Agathoth` と `Tor-Agathoth` が明示的に対応し、現行訳「アガトス／トール＝アガトス」と整合する。Thor-Agoth / Tor-Athagoth / Thoragoth などの伝承上の異綴りは別表記として保持する。既存 target_ja の「アガトート」1件は自動上書きせずWork監査で個別確認する。 2026-09-26ユーザー確定。 |
+| House Daratan | ダラタン家 | approved | user | fixed | 勢力名。Work既訳でも一致。 2026-09-26ユーザー確定。 |
+| Antidas | アンティダス | approved | user | fixed | 人名。Work既訳で反復使用され一致。 2026-09-26ユーザー確定。 |
+| Kingdom of Men | 人の王国 | approved | user | fixed | メルの宗教・政治思想に関わる固有表現。2026-09-27ユーザー確定。 |
+| Gaelius | ガエリウス | approved | user | fixed | 人名。Work既訳でも一致。 2026-09-26ユーザー確定。 |
+| Castle Ganezzar | ガネザール城 | approved | user | fixed | Ganezzar→ガネザールの2026-09-26ユーザー確定を継承。城名全体は未個別承認のためreviewを維持。旧「ガネザー城」はWork監査で統一対象とする。2026-09-27ユーザー確定。 |
+| star room / Star Room | 星辰の間 | approved | user | fixed | 古代施設内の部屋名。制御ラベル内の Star Room も同概念。 2026-09-27ユーザー確定。 |
+| Agatai | アガタイ | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Neleos | ネレオス | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Ordu | オルドゥ | approved | user | contextual | 民族・集団名としては「オルドゥ」。人物・文化・装備等の修飾では「オルドゥの〜」など文脈処理。2026-09-26ユーザー確定。 |
+Work既訳から追加した用語
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Aemolas | エモラス | approved | user | fixed | 人名。 2026-09-26ユーザー確定。 |
+| Cassius | カッシウス | approved | user | fixed | 人名。 2026-09-26ユーザー確定。 |
+| Dellar | デラー | approved | user | fixed | 人名。 2026-09-26ユーザー確定。 |
+| Carrinas | カリナス | approved | user | fixed | 人名。 2026-09-26ユーザー確定。 |
+| Inferiae | インフェリアエ | approved | user | fixed | 地名。2026-09-26ユーザー確定。 |
+| Tartarus | タルタロス | approved | user | fixed | 地名・設定用語。2026-09-26ユーザー確定。 |
+| Zamedi | ザメディ | approved | user | fixed | 地名・古代施設名。2026-09-26ユーザー確定。 |
+| Domitius Ulpius | ドミティウス・ウルピウス | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Thor-Agoth | トール＝アゴス | approved | user | fixed | 固有名詞・神格名。原文には綴り変種 `Thoragoth` が1件あり、同一存在として「トール＝アゴス」に統一する。 2026-09-26ユーザー確定。 |
+| Gla'ath-Zor | グラース＝ゾール | approved | user | fixed | 固有名詞・神格名 2026-09-26ユーザー確定。 |
+| Bar-Hathor | バル＝ハトール | approved | user | fixed | 固有名詞・神格名 2026-09-26ユーザー確定。 |
+| High Lords | 高次支配者 | approved | user | fixed | 高次の領域に属する強大な存在たちの通称。旧「上位の諸侯」は使用しない。 2026-09-26ユーザー確定。 |
+| Artificer | 工匠 | approved | user | fixed | 称号。 2026-09-27ユーザー確定。 |
+| Arcane Art | 秘術 | approved | user | fixed | 設定用語。 2026-09-27ユーザー確定。 |
+| Dar Attan | ダル・アッタン | approved | user | fixed | 地名・歴史用語。2026-09-27ユーザー確定。 |
+| Tiberius Catulus | ティベリウス・カトゥルス | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Call | 呼び声 | approved | user | fixed | 設定用語。 2026-09-27ユーザー確定。 |
+| Legatus Legionis | 軍団長 | approved | user | fixed | 役職 2026-09-27ユーザー確定。 |
+| Ull-Xerath | ウル＝ゼラス | approved | user | fixed | 固有名詞・神格名 2026-09-26ユーザー確定。 |
+| Estios | エスティオス | approved | user | fixed | 地名・歴史用語。2026-09-27ユーザー確定。 |
+| General Kesion | ケシオン将軍 | approved | user | fixed | 人名・役職。 2026-09-26ユーザー確定。 |
+| Dreamer | 夢見る者 | approved | user | fixed | 神格称号 2026-09-26ユーザー確定。 |
+| Flamewalker | 炎を歩む者 | approved | user | fixed | 神格称号 2026-09-26ユーザー確定。 |
+| Boatmen of Styx | ステュクスの渡し守 | approved | user | fixed | 固有組織名として2026-09-26ユーザー確定。文脈上この組織を指す短縮形 `Boatmen` も同組織として扱う。 |
+| contubernium | 分隊 | approved | user | fixed | 軍事編制。`one contubernium` は「一個分隊」 2026-09-27ユーザー確定。 |
+| engines of war | 兵器 | approved | user | fixed | 古代技術・軍事用語 2026-09-27ユーザー確定。 |
+| Dux | 公／将軍 | approved | user | contextual | 単純固定しない。`Dux per Dar Attan` → 「ダル・アッタン公」、`dux bellorum` → 「戦の公」、`Dux Paullus` → 「パウルス将軍」 2026-09-27ユーザー確定。 |
+| guildmaster | 組合長 | review | work | contextual | generic title。商人組織の文脈では「商人組合長」。固有組織名とは別扱い |
+| Magus | 魔導士 | approved | user | fixed | ユーザー確定訳。単数形・個人を指す称号として使用。 |
+| First of the Magi | 筆頭魔導士 | approved | user | fixed | 2026-09-23ユーザー採用。制度上の首位称号。旧「魔導士の第一人者」「首席魔導士」「筆頭〇〇」は使用しない。 |
+| Order of Magi | 魔導士団 | approved | user | fixed | 古代の魔導士組織。文脈上この組織を指す短縮形 `the Order` も「魔導士団」。2026-09-26ユーザー確定。 |
+| Council of Magi | 魔導士評議会 | approved | user | fixed | Magi内部の評議機関。ガルボ将軍の指輪を製作した機関として登場。2026-09-26ユーザー確定。 |
+| House of Magi | 魔導士の館／魔導士の家系 | approved | user | contextual | 固有施設名では「魔導士の館」。`a House of Magi` のような一般用法では「魔導士の家系」等。2026-09-26ユーザー確定。 |
+| Officium | オフィキウム | approved | user | fixed | `First of the Magi’s Officium` は「筆頭魔導士のオフィキウム」。許認可を扱う制度的機関。2026-09-26ユーザー確定。 |
+| ward / wards | 結界／防護紋／防護術式 | approved | user | contextual | Al-Akiaの制御術式や身体へ刻む防護紋など複数用法。単一訳へ機械的に固定しない。2026-09-26ユーザー確定。 |
+| divine essence | 神の精髄 | approved | user | fixed | 儀式で器へ移される神的存在の本質・精髄。2026-09-26ユーザー確定。 |
+| vessel | 器 | approved | user | contextual | 神格を宿す肉体・媒体。船舶の vessel とは別訳。`fleshly vessel` は「肉体の器」等。2026-09-26ユーザー確定。 |
+| thaumaturgical engines | 神異機関 | approved | user | fixed | 神の精髄を器へ移し、異界存在をこの次元へ招くための古代装置群。thaumaturgy→神異術と語体系を統一。2026-09-26ユーザー確定。 |
+| bindings | 拘束術 | approved | user | fixed | 被験者・異界存在を完全支配する制御手段。2026-09-26ユーザー確定。 |
+| plane | 次元 | approved | user | contextual | `our plane`、`native plane`、`divine plane` など。文脈に応じ「次元」「世界」「神界」等を訳し分ける。機械的一括置換禁止。2026-09-26ユーザー確定。 |
+| sacred chamber | 聖室 | approved | user | fixed | Al-Akiaの儀式に関わる固有施設。旧「聖なる部屋」は用語統一QAで修正対象。2026-09-26ユーザー確定。 |
+| Ghost Worlds | 異幽界 | approved | user | fixed | 異なる物理法則を持つ別世界群の固有設定語。死後世界・霊界ではなく、こちらの世界とは異なる法則を持つ実在の異世界群。2026-09-26ユーザー確定。 |
+| shadowy gates | 影の門 | approved | user | fixed | 異世界ネットワークに接続する門。2026-09-26ユーザー確定。 |
+| Words of Power | 力ある言葉 | approved | user | fixed | 古代の術式・拘束に関わる設定語。複数箇所で一致。2026-09-26ユーザー確定。 |
+| Wrath of Power | 力の憤怒 | review | user | fixed | 2026-09-26ユーザー暫定採用。確定ではないためreviewを維持。歴史・神話上の表現。 |
+| Servants of Power | 力の僕 | review | user | fixed | 2026-09-26ユーザー暫定採用。確定ではないためreviewを維持。Q'antaari側の固有呼称。 |
+| Gods of Chaos | 混沌の神々 | approved | user | fixed | 歴史・神話上の呼称。Work既訳で確認。2026-09-26ユーザー確定。 |
+| High Mages | 高位の魔導士たち | approved | user | fixed | High Magus→大魔導士という正式称号とは分け、高位の魔導士たちを指す集合的表現として2026-09-26ユーザー確定。 |
+| aleier | アレイア | approved | user | fixed | AoD世界固有の冶金分類名。青銅・鉄・青鋼・星鉄など、複数の物質を鍛え合わせて新たな物質にした武器用金属を包括する呼称。一般語「合成金属」ではなく固有語として2026-09-26ユーザー確定。 |
+| blue steel | 青鋼 | approved | user | fixed | aleierの一種。Work既訳で複数回一致。2026-09-26ユーザー確定。 |
+| sky metal | 星鉄 | approved | user | fixed | 2026-09-23採用。aleierの一種。原文の sky metal を素材名として簡潔に表現 |
+| Coltan | コルタン | approved | user | fixed | 人名。`Coltan_01` 初出時の暫定表記。2026-09-26ユーザー確定。 |
+| Kadura | カドゥラ | approved | user | fixed | 錬金術素材・植物名。`Kadura leaves` は「カドゥラの葉」。 2026-09-27ユーザー確定。 |
+| Taliades | タリアデス | approved | user | fixed | 貴族名・家名として登場。`Dellar_01` 初出時の暫定表記。 2026-09-26ユーザー確定。 |
+| Coltar | コルター | approved | user | fixed | 地名・戦場名。タリアデス家の戦歴で言及。 2026-09-27ユーザー確定。 |
+| Trudoth | トルドス | approved | user | fixed | 地名・戦場名。皇帝のために戦った地として言及。 2026-09-27ユーザー確定。 |
+| East Beck | イースト・ベック | approved | user | fixed | 地名・戦場名。皇帝のために戦った地として言及。 2026-09-27ユーザー確定。 |
+| Stanias | スタニアス | approved | user | fixed | 地名・戦場名。皇帝のために戦った地として言及。 2026-09-27ユーザー確定。 |
+| Sohrab | ソーラブ | approved | user | fixed | 人名。古代機械の専門家として登場。2026-09-26ユーザー確定。 |
+| Bactrian | バクトリア | draft | user | contextual | 文脈により「バクトリア人」「バクトリアの」「バクトリア出身」と訳し分ける。2026-09-27ユーザー確認。 |
+| Second Chance | セカンド・チャンス | approved | user | fixed | ユーザー確定訳。鉱山・収容地名。Dellar が約10年間送られていた場所。 |
+| Creed | 信条 | approved | user | fixed | ユーザー確定訳。固有ラベル・名称として使用。一般文中の creed は文脈に応じて訳す。 |
+| Under Siege | 包囲下 | approved | user | fixed | ユーザー確定訳。固有ラベル・名称として使用。一般文中の under siege は文脈に応じて訳す。 |
+| reagent | 試薬 | approved | user | fixed | 錬金術の追加素材。 2026-09-27ユーザー確定。 |
+| liquid fire | 火炎液 | approved | user | fixed | 錬金術の焼夷性液体。Workでは錬金術品として black powder bombs と別系統で列挙され、実物も熱を持つガラス管内の「絶えず形を変える液体の炎」として描写される。「液体火薬」は black powder（黒色火薬）と概念が混同するため使用しない。Liquid Fire Vial 系アイテム名称の基礎語。 2026-09-27ユーザー確定。 |
+| Dias | ディアス | approved | user | fixed | 人名。暗殺者ギルドの一員。2026-09-26ユーザー確定。 |
+| Athanasius | アタナシウス | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Maseus | マセウス | approved | user | fixed | 人名。Quest_MG9_01でストラボスの使者として登場。2026-09-26ユーザー確定。 |
+| Strabos | ストラボス | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Varro | ヴァロ | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Second Acolyte | 第二侍祭 | approved | user | fixed | 宗教組織内の第二位の侍祭。First Acolyte→第一侍祭と対になる役職名。2026-09-26ユーザー確定。 |
+| Inquisition | 異端審問局 | approved | user | fixed | メルの権力を支える宗教・統治組織。2026-09-26ユーザー確定。 |
+| Golden Kingdom | 黄金王国 | approved | user | fixed | 国家・政治圏の呼称。 2026-09-27ユーザー確定。 |
+| Darista | ダリスタ | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Hagnon | ハグノン | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Hamza | ハムザ | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Praefectus Praetorio | 近衛長官 | approved | user | fixed | 役職名。Gaelius が Praetor を昇進させる際の称号。2026-09-26ユーザー確定。 |
+| Praetorian Guard | 近衛隊 | approved | user | fixed | Gaelius 配下の近衛部隊。Praefectus Praetorio→近衛長官と対になる組織名。2026-09-26ユーザー確定。 |
+| Levir | レヴィル | approved | user | fixed | 人名。 2026-09-26ユーザー確定。 |
+| Lowtown | ロウタウン | approved | user | fixed | ガネザール下層地区の固有地名。 2026-09-27ユーザー確定。 |
+| Glabrio | グラブリオ | approved | user | fixed | 人名。ロウタウンの盗賊組織関係者。 2026-09-26ユーザー確定。 |
+| Paullus | パウルス | approved | user | fixed | 人名。帝国衛兵団の指導者。 2026-09-26ユーザー確定。 |
+| Senna | センナ | approved | user | fixed | 人名。貴族。Work表示対象144件で「センナ」に統一されていることを確認。 2026-09-26ユーザー確定。 |
+| Inquisitor | 異端審問官 | approved | user | fixed | 異端審問局の役職名。2026-09-26ユーザー確定。 |
+| Dead River | 死の川 | approved | user | fixed | 地名。集落・地域名として登場。 2026-09-27ユーザー確定。 |
+| First Acolyte | 第一侍祭 | approved | user | fixed | 宗教組織内の第一位の侍祭。Second Acolyte→第二侍祭と対になる役職名。2026-09-26ユーザー確定。 |
+| Hellgate | ヘルゲート | approved | user | fixed | 地名。神殿へ向かう経路上の地点。 2026-09-27ユーザー確定。 |
+| Miltiades | ミルティアデス | approved | user | fixed | 人名。 2026-09-26ユーザー確定。 |
+| ziggurat | ジッグラト | approved | user | fixed | 古代建造物。神殿頂部の段状塔。 2026-09-27ユーザー確定。 |
+| Holiness | 聖下 | approved | user | fixed | 神格・宗教的権威への敬称。Miltiades が Agathoth に対して使用。2026-09-26ユーザー確定。 |
+| Linos | リノス | approved | user | fixed | 人名。 2026-09-26ユーザー確定。 |
+| Ibn Hadad al-Sarabi | イブン・ハダド・アル＝サラビ | approved | user | fixed | 人名。Feng 会話で言及。 2026-09-26ユーザー確定。 |
+| orrery | 惑星運行儀 | approved | user | fixed | 古代天文学装置。惑星配置を示す機械。 2026-09-27ユーザー確定。 |
+| Thessalos | テッサロス | approved | user | fixed | 人名。古い天球儀の所有者として言及。 2026-09-26ユーザー確定。 |
+| map of Thor-Agoth | トール＝アゴスの地図 | approved | user | fixed | 遺物名。Magi の遺物への道を示す地図。 2026-09-27ユーザー確定。 |
+| Galbo | ガルボ | approved | user | fixed | 人名。将軍。魔導士評議会製の指輪の所有者として言及。 2026-09-26ユーザー確定。 |
+| Zhin | ジン | approved | user | fixed | 地名・国家名。Feng の出身地。 2026-09-27ユーザー確定。 |
+| Enarion | エナリオン | approved | user | contextual | 人名。通常は「エナリオン」。Quest_Abyss_01 の文字謎解きでは綴り自体が手掛かりになるため、必要箇所では `Enarion（エナリオン）` と原綴りを併記し、文字そのものを論じる箇所では `Enarion` を保持する。機械的一括置換禁止。2026-09-26ユーザー確定。 |
+| Einar | エイナル | approved | user | contextual | 人名。Enarion の本名。通常は「エイナル」。Quest_Abyss_01 の文字謎解きでは綴り自体が手掛かりになるため、必要箇所では `Einar（エイナル）` と原綴りを併記し、文字そのものを論じる箇所では `Einar` を保持する。機械的一括置換禁止。2026-09-26ユーザー確定。 |
+| Abyss | 深淵 | approved | user | fixed | マードランに残る大戦由来の異常地帯の固有名。一般名詞 abyss とは区別。2026-09-26ユーザー確定。 |
+| Brontia | ブロンティア | approved | user | fixed | 人名。街頭で人々に語る女性。 2026-09-26ユーザー確定。 |
+| Tiresias | ティレシアス | approved | user | fixed | 人名。老伝承学者。 2026-09-26ユーザー確定。 |
+| Marcus | マルクス | approved | user | fixed | 人名。Tiresias 会話で言及。 2026-09-26ユーザー確定。 |
+| power tube | 動力管 | approved | user | fixed | 古代装置部品。Tiresias が手渡す大型部品。 2026-09-27ユーザー確定。 |
+| Lectio Facilior | レクティオ・ファキリオル | draft | project | fixed | 文献解釈の方法論名。より単純で文脈外要素の少ない解釈を選ぶ考え方。 |
+| Marcus Sidonius Fabianus | マルクス・シドニウス・ファビアヌス | approved | user | fixed | 人名。第二侍祭。 2026-09-26ユーザー確定。 |
+| thaumaturgy | 神異術 | approved | user | fixed | 古代技術・魔術系分野。飛行船修理に必要な専門分野として言及。2026-09-26ユーザー確定。 |
+| Murad | ムラド | approved | user | fixed | 人名。GNZ_Arena_01 の闘技場戦士。 2026-09-26ユーザー確定。 |
+| Darbus | ダルブス | approved | user | fixed | 人名。GNZ_Arena_01 の弓兵。 2026-09-26ユーザー確定。 |
+| Timotheus | ティモテウス | approved | user | fixed | 人名。GNZ_Arena_01 の弓兵。 2026-09-26ユーザー確定。 |
+| Lorenza | ロレンツァ | approved | user | fixed | 人名。Lady Lorenza。アウレリアン家側人物。 2026-09-26ユーザー確定。 |
+| Thrice Blessed | 三たび祝福されし者 | approved | user | fixed | Faelan の尊称。 2026-09-26ユーザー確定。 |
+| glamour | 幻惑 | approved | user | fixed | ユーザー確定訳。Faelan の精神干渉・幻覚効果。魔法・能力名として登録対象。 |
+| Berengarius | ベレンガリウス | approved | user | fixed | 人名。ガネザールの鑑定士・宝石商。 2026-09-26ユーザー確定。 |
+| Hector | ヘクター | approved | user | fixed | 人名。ガネザールの信徒側人物として言及。 2026-09-26ユーザー確定。 |
+| Darganus | ダルガヌス | approved | user | fixed | 人名。Lord Darganus。ガネザール関連人物。 2026-09-26ユーザー確定。 |
+| Claudia | クラウディア | approved | user | fixed | 人名。ガネザールの信徒側人物。 2026-09-26ユーザー確定。 |
+| Tycho | ティコ | approved | user | fixed | 人名。クラウディア会話で言及。 2026-09-26ユーザー確定。 |
+| Elias | エリアス | approved | user | fixed | 人名。ダルガヌスへの使者・依頼導線で言及。 2026-09-26ユーザー確定。 |
+| city watch | 市衛兵隊 | approved | user | fixed | ガネザールの都市警備組織。 2026-09-27ユーザー確定。 |
+| Pancratius | パンクラティウス | approved | user | fixed | 人名。ロウタウンの新しい説教師。 2026-09-26ユーザー確定。 |
+| House Varus | ヴァルス家 | approved | user | fixed | 貴族家名。ミルティアデスの所属。 2026-09-26ユーザー確定。 |
+| Marcus Fabianus | マルクス・ファビアヌス | approved | user | fixed | 人名の短縮表記。Marcus Sidonius Fabianus と同一人物。 2026-09-26ユーザー確定。 |
+| Hashish | ハシシ | draft | project | fixed | 薬物名。路上の売人の商品。 |
+| blue lotus | 青蓮 | approved | user | fixed | 薬物・植物名。路上の売人の商品。 |
+| henbane | ヒヨス | approved | user | fixed | 薬物・植物名。路上の売人の商品。 |
+| Gaius Laevinus | ガイウス・ラエヴィヌス | approved | user | fixed | 人名。ガネザールで探索対象として言及。 旧「ガイウス・ラエウィヌス」から「ガイウス・ラエヴィヌス」へ変更。 2026-09-26ユーザー確定。 |
+| Esdras | エスドラス | approved | user | fixed | 人名。ガネザールの商人。 2026-09-26ユーザー確定。 |
+| Skyport | スカイポート | approved | user | fixed | ガネザール上層地区の地区名。 2026-09-27ユーザー確定。 |
+| Temple | 聖堂／神殿 | approved | user | contextual | メル／ガネザールの現行宗教組織・施設は「聖堂」。古代・異教・一般的な temple は「神殿」。technical_review の制御ラベルは翻訳しない。2026-09-26ユーザー確定。 |
+| Holy City | 聖都 | approved | user | fixed | ガネザールの異名・呼称。2026-09-26ユーザー確定。 |
+| Skanian / Scanian | スカニア | draft | project | contextual | 民族・地域・言語に関する呼称・形容詞。人物を指す場合は「スカニア人」、言語・文字体系では「スカニア語」「スカニア文字」、形容では「スカニアの〜」など文脈で訳し分ける。Scanian は Quest_Abyss_01 に見られる綴り揺れ。 |
+| Aellium | アエリウム | approved | user | fixed | 旧帝国の首都名。 2026-09-27ユーザー確定。 |
+| Aicken | アイケン | approved | user | fixed | 人名。ロウタウンで処刑された不信心者。 2026-09-26ユーザー確定。 |
+| Gaius Valerius Crassus | ガイウス・ヴァレリウス・クラッサス | approved | user | fixed | クラッサス家の創始者として伝承に登場。Crassus→クラッサスを継承。Valerius は「ヴァレリウス」で2026-09-26ユーザー確定。 |
+| Hellfyre | ヘルファイア | approved | user | fixed | 古代兵器・現象名。文献によって指すものが異なる。 2026-09-27ユーザー確定。 |
+| Baal-Zurath | バアル＝ズラス | approved | user | fixed | Balzaar と同一存在を指す古称・異称。伝承上「悪魔の長」とされる。表記は別名として保持。 2026-09-26ユーザー確定。 |
+| Lords of Chaos | 混沌の主 | approved | user | fixed | 四柱の超越存在を指す呼称。Gods of Chaos→混沌の神々と同一存在を別の伝承・立場から呼ぶ表現として整理。2026-09-26ユーザー確定。 |
+| Oracle | 神託者／神託所 | approved | user | contextual | Work照合で72出現。人物・speaker・神々と語る者を指す70件は「神託者」、メルが信徒を送る目的地・施設を指す2件は「神託所」。単一訳へ機械固定しない。 2026-09-27ユーザー確定。 |
+| Blessed Eye | 祝福の眼 | approved | user | fixed | 特殊な視覚を得るための重要アイテム。 2026-09-27ユーザー確定。 |
+| Saross | サロス | approved | user | fixed | 地名。図書館がある古代遺跡。 2026-09-27ユーザー確定。 |
+| First Sword | 第一の剣 | approved | user | fixed | カリナスに与えられる宗教的・軍事的称号。神々が振るう「剣」という比喩を保つ。称号用法のtarget_ja / review に「首席剣士」1件あり、後続QA対象。普通名詞 first sword とは区別する。2026-09-26ユーザー確定。 |
+| magistratus | 市政官 | approved | user | fixed | 都市行政を担う官職。ガネザール等で使用。Quest_MG9_01の旧「マギストラトゥス」も「市政官」へ統一対象。2026-09-26ユーザー確定。 |
+| Sellsword Legion | 傭兵団 | approved | user | fixed | 傭兵部隊の呼称。 2026-09-27ユーザー確定。 |
+| Mind Shield | 精神防壁 | approved | user | fixed | 精神干渉を防ぐ能力・状態名。2026-09-26ユーザー確定。 |
+| Darius | ダリウス | approved | user | fixed | 人名。ガネザール攻略を試みた戦士。 2026-09-26ユーザー確定。 |
+| Athazor | アサゾル | approved | user | fixed | 異界存在の名。Mind Shield 系統と関連。 2026-09-26ユーザー確定。 |
+| Yazatas | ヤザタ | approved | user | fixed | バルザールら異界存在に対する古い呼称。「崇拝に値する者」の意。2026-09-26ユーザー確定。 |
+| Medicus | 医師 | approved | user | fixed | 治療を行う役職名。2026-09-26ユーザー確定。 |
+| Araborus | アラボルス | approved | user | fixed | 城門商人による Ouroboros の誤称。会話上の言い間違いとして保持。 2026-09-27ユーザー確定。 |
+| Ouroboros | ウロボロス | approved | user | fixed | クラッスス家の印として語られる、自らの尾を噛む蛇。2026-09-27ユーザー確定。 |
+| Al-Jazari | アル＝ジャザリ | approved | user | fixed | 伝説的な技師。 2026-09-26ユーザー確定。 |
+| Naskhi | ナスフ体 | approved | user | fixed | 文字・書体名。アル＝ジャザリの印の周囲に刻まれている。2026-09-27ユーザー確定。 |
+| Compendium from the Theory and Practice of the Mechanical Arts | 『機械技芸の理論と実践大全』 | approved | user | fixed | アル＝ジャザリの設計・製作図を収めた手稿。 2026-09-27ユーザー確定。 |
+| Hangar | 格納庫 | approved | user | fixed | 古代飛行艦を収容する地下施設。 2026-09-27ユーザー確定。 |
+| Prayer to Air Elementals | 風の精霊への祈り | approved | user | fixed | 古代飛行戦車・飛行艦を動かすためのマントラ。2026-09-26ユーザー確定。 |
+| Pax Imperium | パクス・インペリウム | approved | user | fixed | 古代飛行戦艦の艦名。2026-09-26ユーザー確定。 |
+| Trierarch | 艦長 | approved | user | fixed | 古代艦艇の指揮官職。2026-09-26ユーザー確定。 |
+| fusiliers | 銃兵 | approved | user | fixed | 古代軍の歩兵兵科。2026-09-26ユーザー確定。 |
+| Optio | 副官 | approved | user | fixed | 古代軍の階級・職名。百人隊長を補佐する役職。2026-09-26ユーザー確定。 |
+| Sentinels | センチネル | approved | user | fixed | 古代施設の防衛機械群の固有呼称。2026-09-26ユーザー確定。 |
+| Bentanagbal | ベンタナグバル | approved | user | fixed | 伝承学者の人名。通称 Bennie。 2026-09-26ユーザー確定。 |
+| construct | 機械人形 | approved | user | contextual | 名詞で古代施設の自律機械を指す場合は「機械人形」。動詞 construct（作る／組み立てる）や magical construct 等は文脈で判定し、機械的一括置換禁止。2026-09-26ユーザー確定。 |
+| portal network | 転移門ネットワーク | approved | user | fixed | 古代施設を結ぶポータル網。2026-09-26ユーザー確定。 |
+| nullifier | 無効化装置 | approved | user | fixed | 古代機械人形を停止させる重要装置。2026-09-26ユーザー確定。 |
+| Abu Hassan Ibn Hadad al-Sarabi | アブー・ハッサン・イブン・ハダド・アル＝サラビ | approved | user | fixed | 古代の人物名。既存 Ibn Hadad al-Sarabi と同一人物のフルネーム。旧「アブー・ハサン・イブン・ハダド・アル＝サラビ」から変更。2026-09-26ユーザー確定。 |
+| Azra | アズラ | approved | user | fixed | インフェリアエの老婆・導師的人物。 2026-09-26ユーザー確定。 |
+| first exodus | 第一次追放 | draft | project | fixed | マードランから不要とされた人々が砂漠へ追放された歴史上の出来事。 |
+| Marcus Domitius Crassus | マルクス・ドミティウス・クラッサス | approved | user | fixed | クラッサス家に関わる古代の人物名。Crassus は approved「クラッサス」を継承。 2026-09-26ユーザー確定。 |
+| Power Armor | パワーアーマー | approved | user | fixed | 古代技術製の強化装甲。重要アイテム名。 2026-09-27ユーザー確定。 |
+| Kleitos | クレイトス | approved | user | fixed | 商人・酒場主人の人名。 2026-09-26ユーザー確定。 |
+| Mercato Breni | メルカト・ブレニ | approved | user | fixed | 帝国衛兵団関係者の人名。 2026-09-26ユーザー確定。 |
+| Lucius | ルキウス | approved | user | fixed | テロンの賭博師の人名。 2026-09-26ユーザー確定。 |
+| Leon | レオン | approved | user | fixed | マードランのスラムに住む案内人。 2026-09-26ユーザー確定。 |
+| Pavola | パヴォラ | approved | user | fixed | 帝国衛兵団の軍団長。 2026-09-26ユーザー確定。 |
+| Cyrus | キュロス | approved | user | fixed | 同一人物。2026-09-26ユーザー確定「キュロス」。Workでは旧訳「サイラス」60件／「キュロス」12件に分裂しており、旧「サイラス」はWork全体監査で統一対象。technical_review 1件は未訳のまま維持。 |
+| Kadmos | カドモス | approved | user | fixed | 元闘技場王者の槍使い。 2026-09-26ユーザー確定。 |
+| Regulus | レグルス | approved | user | fixed | マードランの説教師騒動に関わる人物。 2026-09-26ユーザー確定。 |
+| Basil | バジル | approved | user | fixed | マードランの酒場関係者。 2026-09-26ユーザー確定。 |
+| Basileios | バシレイオス | approved | user | fixed | Basil に対する正式名・別表記。 2026-09-26ユーザー確定。 |
+| Bassar | バッサル | approved | user | fixed | 四十人盗賊団関係者の人名。 2026-09-26ユーザー確定。 |
+| Nasir | ナシル | approved | user | fixed | 宝石クエスト関係者の人名。 2026-09-26ユーザー確定。 |
+| Silvanus | シルヴァヌス | approved | user | fixed | 宝石の所有者。 2026-09-26ユーザー確定。 |
+| Zagros | ザグロス | approved | user | fixed | かつて闘技場を支配した剣闘士。 2026-09-26ユーザー確定。 |
+| Ronan | ロナン | approved | user | fixed | ザグロスを倒した三兄弟の一人。 2026-09-26ユーザー確定。 |
+| Marcus Tiberius Aerus | マルクス・ティベリウス・アエルス | approved | user | fixed | 青鋼の鎧の旧所有者。 2026-09-26ユーザー確定。 |
+| Marcus Cornelius Arvina | マルクス・コルネリウス・アルヴィナ | approved | user | fixed | 珍品館の名に使われる人名。 2026-09-26ユーザー確定。 |
+| Exotic Emporium | 異国珍品店 | approved | user | fixed | 異国武器商が名乗る店名。2026-09-27ユーザー確定。 |
+| Flying Hawk | フライング・ホーク | approved | user | fixed | 遠隔武器商が名乗る店名／呼称。 2026-09-27ユーザー確定。 |
+| Imperial Armory | 帝国武具店 | approved | user | fixed | 帝国式武器を扱う商店名。 2026-09-27ユーザー確定。 |
+| Cattullus of Asmara | アスマラのカトゥルス | approved | user | fixed | 名高い刀鍛冶。 2026-09-26ユーザー確定。 |
+| Quintus Sabellius Baro | クィントゥス・サベリウス・バロ | approved | user | fixed | 『無敵』と呼ばれた盾使い。Quintus はユーザー確定「クィントゥス」を継承。 2026-09-26ユーザー確定。 |
+| Menes | メネス | approved | user | fixed | 井戸探索で見つかる潜水者。 2026-09-26ユーザー確定。 |
+| Hassatur | ハサトゥル | approved | user | fixed | 古代戦争に関わる存在の名。 2026-09-26ユーザー確定。 |
+| Maelius | マエリウス | approved | user | fixed | 山中集落の人物名。 2026-09-26ユーザー確定。 |
+| Titan’s Gate | 巨神の門 | approved | user | fixed | 山中集落の奥にある古代の大扉。2026-09-27ユーザー確定。 |
+| Daneus | ダネウス | approved | user | fixed | 山中集落周辺の人物名。 2026-09-26ユーザー確定。 |
+| Rapid Cellular Regeneration | 急速細胞再生 | approved | user | fixed | 戦前の希少な再生霊薬。 2026-09-27ユーザー確定。 |
+| Abukar | アブカル | approved | user | fixed | マードランの伝承学者・星読み。Work表示対象63件がすべて「アブカル」で一致。内部制御文字列2件は未訳のまま technical_review。 2026-09-26ユーザー確定。 |
+| telescopium | テレスコピウム | approved | user | fixed | アブカルが使う古代の望遠観測装置。 2026-09-27ユーザー確定。 |
+| Caius Amerius | カイウス・アメリウス | approved | user | fixed | マードランの探鉱者。 2026-09-26ユーザー確定。 |
+| Marcus Valla | マルクス・ヴァッラ | approved | user | fixed | カイウス・アメリウスの出資者。旧「マルクス・ウァッラ」から「マルクス・ヴァッラ」へ変更。Work既訳35件の旧表記は後続QA対象。2026-09-26ユーザー確定。 |
+| Isatis | イサティス | approved | user | fixed | 闘技場の対戦相手。 2026-09-26ユーザー確定。 |
+| Papa Yochan | パパ・ヨチャン | approved | user | fixed | 闘技場の対戦相手。 2026-09-26ユーザー確定。 |
+| Nicander | ニカンドロス | approved | user | fixed | 闘技場の対戦相手。 2026-09-26ユーザー確定。 |
+| Bendidoros | ベンディドロス | approved | user | fixed | 闘技場の対戦相手。 2026-09-26ユーザー確定。 |
+| Sarpedon | サルペドン | approved | user | fixed | 闘技場の対戦相手。 2026-09-26ユーザー確定。 |
+| Mack the Knife | ナイフのマック | approved | user | fixed | 闘技場の対戦相手の通り名。 2026-09-26ユーザー確定。 |
+| Triarii | トリアリイ | approved | user | fixed | 闘技場の対戦相手。 2026-09-27ユーザー確定。 |
+| Al-Sahir | アル＝サヒール | approved | user | fixed | 闘技場王者。原文の `Al Sahir` / `Al-Sahir` は同一人物の綴り変種として同じ表記に統一する。 2026-09-26ユーザー確定。 |
+| Hamul | ハムル | approved | user | fixed | 王者への挑戦者。 2026-09-26ユーザー確定。 |
+| Plaudius | プラウディウス | approved | user | fixed | 王者への挑戦者。 2026-09-26ユーザー確定。 |
+| Widowmaker | ウィドウメーカー | approved | user | fixed | 王者への挑戦者の通り名。意味訳せずカタカナ表記を採用。2026-09-26ユーザー確定。 |
+| Nabupolassar | ナブポラッサル | approved | user | fixed | メルに仕える預言者。 2026-09-26ユーザー確定。 |
+| Barnus | バルヌス | approved | user | fixed | 帝国衛兵団の百人隊長。 2026-09-26ユーザー確定。 |
+| Raenas | ラエナス | approved | user | fixed | カエル＝トールの人物名。 2026-09-26ユーザー確定。 |
+| Belgutai | ベルグタイ | approved | user | fixed | オルドゥの有力戦士。 2026-09-26ユーザー確定。 |
+| Thorgul | トルグル | approved | user | fixed | オルドゥの族長。 2026-09-26ユーザー確定。 |
+| Brandir | ブランディル | approved | user | fixed | 傭兵団「狂犬団」の団長。 2026-09-26ユーザー確定。 |
+| Gudbrandr | グドブランドル | approved | user | fixed | ブランディルの本名。 2026-09-26ユーザー確定。 |
+| Mad Dogs | 狂犬団 | approved | user | fixed | ブランディル率いる傭兵団。 2026-09-27ユーザー確定。 |
+| Red Cloaks | 赤外套団 | approved | user | fixed | テロン周辺の傭兵団。 2026-09-27ユーザー確定。 |
+| Calvus | カルヴス | approved | user | fixed | マードランの貴族家名・人物名。 2026-09-26ユーザー確定。 |
+| Clemens | クレメンス | approved | user | fixed | スラム地区の医師。 2026-09-26ユーザー確定。 |
+| Clericus | クレリクス | approved | user | fixed | 隊商や交易路について話す商人。 2026-09-26ユーザー確定。 |
+| Cippur | キップル | approved | user | fixed | かつて帝国衛兵団が占領した都市。 2026-09-27ユーザー確定。 |
+| Shieldwall | 防壁団 | draft | user | fixed | ダリスタが所属していた傭兵団。訳語候補「防壁団」。2026-09-27ユーザー指定だが未確定のためdraftを維持。 |
+| Jellal’s Lions | ジェラルの獅子団 | approved | user | fixed | アスマラ包囲戦に参加した傭兵団。構成名 `Jellal→ジェラル` を継承する。 2026-09-27ユーザー確定。 |
+| Diocletus | ディオクレトゥス | approved | user | fixed | カエル＝トールの士官。 2026-09-26ユーザー確定。 |
+| Erebus | エレブス | approved | user | fixed | 古代史・戦争史に詳しい学者。 2026-09-26ユーザー確定。 |
+| Esbenus | エスベヌス | approved | user | fixed | 襲撃者の首領。ダラタン家の捕虜を人質に取る。 2026-09-26ユーザー確定。 |
+| Nicanor | ニカノル | approved | user | fixed | エスベヌスの一行にいた人物。 2026-09-26ユーザー確定。 |
+| Farro | ファロ | approved | user | fixed | カエル＝トールの百人隊長。 2026-09-26ユーザー確定。 |
+| Fulvio | フルヴィオ | approved | user | fixed | ネレオス配下の人物。旧「フルウィオ」から「フルヴィオ」へ変更。2026-09-26ユーザー確定。 |
+| Harran’s Pass | ハラン峠 | approved | user | fixed | オルドゥとの戦いに関わる峠。 2026-09-27ユーザー確定。 |
+| Farid | ファリド | approved | user | fixed | グラブリオの副官。 2026-09-26ユーザー確定。 |
+| Red Gracchus | 赤のグラックス | approved | user | fixed | 襲撃者の一人。赤のグラックス。 2026-09-26ユーザー確定。 |
+| Hermon | ハーモン | approved | user | fixed | 交易広場に関わる人物。 2026-09-26ユーザー確定。 |
+| Mehrab | メーラブ | approved | user | fixed | スラムの一角を支配する人物。 2026-09-26ユーザー確定。 |
+| Iola | イオラ | approved | user | fixed | 古代の治療機械を扱う若い伝承学者。 2026-09-26ユーザー確定。 |
+| Isandros | イサンドロス | approved | user | fixed | スラムの若い案内役。ギルド志望。 2026-09-26ユーザー確定。 |
+| Keeper of Tales | 語り部 | approved | user | fixed | オルドゥの伝承を記憶し語り継ぐ役目。2026-09-27ユーザー確定。 |
+| Tngri | テングリ | approved | user | fixed | オルドゥ伝承に登場する霊的存在。2026-09-27ユーザー確定。 |
+| Adad | アダド | approved | user | fixed | テングリを肉体へ縛る術を得た伝説上の呪術師。 2026-09-26ユーザー確定。 |
+| Ynghaanshungge | インガーンシュンゲ | draft | project | fixed | テングリの名の一つ。 |
+| Yuan-Shagga | ユアン＝シャッガ | approved | user | fixed | テングリの名の一つ。2026-09-27ユーザー確定。 |
+| Shuun-ae | シューン＝アエ | approved | user | fixed | 『輝く蛇』と呼ばれるテングリの名。2026-09-27ユーザー確定。 |
+| Hundred Swords | 百剣団 | approved | user | fixed | 落ち目の傭兵団。 2026-09-27ユーザー確定。 |
+| Antidas' Hoard | アンティダスの財宝 | approved | user | fixed | アンティダスの祖先に預けられたと噂される莫大な財宝。 2026-09-27ユーザー確定。 |
+| Livia | リヴィア | approved | user | fixed | テロンからマードランへ来た女性。スラム運営に関心を持つ。 2026-09-26ユーザー確定。 |
+| House Calani | カラニ家 | approved | user | fixed | かつてマードランを治めていた諸侯家。 2026-09-26ユーザー確定。 |
+| The Lusty Nymph | 好色なニンフ | draft | project | fixed | アスマラにある娼館。リヴィアの生家。 |
+| Eugenius | エウゲニウス | approved | user | fixed | マードラン市場へ農産物を卸す農夫。 2026-09-26ユーザー確定。 |
+| District of Wisdom | 叡智の地区 | approved | user | fixed | 大戦前のマードランに存在した学術地区。現在の深淵。 2026-09-27ユーザー確定。 |
+| Maximus Septimius Helva | マクシムス・セプティミウス・ヘルヴァ | approved | user | fixed | 帝国衛兵団の年代記・記録・会計を預かる人物。旧「ヘルウァ」から「ヘルヴァ」へ変更。2026-09-26ユーザー確定。 |
+| Caius Damianus | カイウス・ダミアヌス | approved | user | fixed | 帝国軍を代表して七諸侯家と憲章を締結した軍団長。後にDux。 2026-09-26ユーザー確定。 |
+| House Tal Gazar | タル・ガザル家 | approved | user | fixed | かつて存在した諸侯家。 2026-09-26ユーザー確定。 |
+| House Maracas | マラカス家 | approved | user | fixed | かつて存在した諸侯家。 2026-09-26ユーザー確定。 |
+| House Sydonius | シドニウス家 | approved | user | fixed | かつて存在した諸侯家。 2026-09-26ユーザー確定。 |
+| House Almansor | アルマンソル家 | approved | user | fixed | かつて存在した諸侯家。 2026-09-26ユーザー確定。 |
+| Lord Barhalzi | バルハルジ卿 | approved | user | fixed | アルマンソル家の領主。暗殺後、継承戦争が発生。 2026-09-26ユーザー確定。 |
+| Mehrab’s Blades | メーラブの刃 | approved | user | fixed | 深淵への通路を押さえるメーラブ配下の一団。 2026-09-27ユーザー確定。 |
+| Promotor fidei | 信仰擁護者 | draft | project | fixed | メルが用いるラテン語由来の宗教的呼称。 |
+| House of Worship | 信仰の家 | approved | user | fixed | メルが構想する、神々を中心とした新たな秩序。 2026-09-27ユーザー確定。 |
+| Gaius Cornelius Varus | ガイウス・コルネリウス・ヴァルス | approved | user | fixed | マードラン交易地区に住む没落貴族。ミルティアデスの元相棒。 2026-09-26ユーザー確定。 |
+| consul | 執政官 | approved | user | fixed | 都市統治の行政・軍事責任者。文官執政官／軍人執政官として用例あり。 2026-09-27ユーザー確定。 |
+| Petras | ペトラス | approved | user | fixed | 預言者ナブポラッサルを演じている人物。 2026-09-26ユーザー確定。 |
+| Holy of Holies | 至聖所 | approved | user | fixed | メルが秘匿する最奥の聖域。神々と接触する試練の場への導線。 2026-09-27ユーザー確定。 |
+| Ramirus | ラミルス | approved | user | fixed | 荒野で遺物を扱う衛兵。 2026-09-26ユーザー確定。 |
+| Rhaskos | ラスコス | approved | user | fixed | 鉱山付近でアウレリアン家と取引する商人／採掘者。 2026-09-26ユーザー確定。 |
+| Roni | ロニ | approved | user | fixed | マードランのステュクスの渡し守所属の若者。 2026-09-26ユーザー確定。 |
+| Rusty | ラスティ | approved | user | fixed | スラムのならず者。ギルド入りを望んでいる。 2026-09-26ユーザー確定。 |
+| Lord of Coins | 金貨卿 | draft | project | fixed | ストラボスが得る爵位。 |
+| Bolad | ボラド | approved | user | fixed | オルドゥ伝承に登場する伝説的戦士。 2026-09-26ユーザー確定。 |
+| sky-father | 父なる天 | approved | user | fixed | オルドゥが崇敬する天空の父神。2026-09-27ユーザー確定。 |
+| tumen | トゥメン | approved | user | fixed | 一万人規模のオルドゥ軍編制。 2026-09-27ユーザー確定。 |
+| Elder Gods | 古き神々 | approved | user | fixed | 虚空の存在たちを人間側が呼んだ総称。PRT_Portalで使用。 2026-09-26ユーザー確定。 |
+| compact | 盟約 | approved | user | fixed | 魔導士たちと虚空の存在との間で交わされた契約・約束を指す設定語。 2026-09-27ユーザー確定。 |
+| Masud | マスード | approved | user | fixed | Quest_AG4_01に登場する人物名。 2026-09-26ユーザー確定。 |
+| High Temple | 大神殿 | approved | user | fixed | マードランのスラムにある旧神殿。盗賊ギルド本部として使われる。 2026-09-27ユーザー確定。 |
+| Maadoran Slums | マードランのスラム | approved | user | fixed | マードランのスラム地区。 2026-09-27ユーザー確定。 |
+| Lysander | ライサンダー | approved | user | fixed | 暗殺者ギルドの一員。Quest_AG4_05で言及。 2026-09-26ユーザー確定。 |
+| opus caementicium | オプス・カエメンティキウム | draft | project | fixed | 古代建築技術のコンクリートを指す設定語。Quest_Abyss_01で使用。 |
+| Galath | ガラト | approved | user | fixed | Quest_Abyss_01の幻視で呼ばれる人物名。 2026-09-26ユーザー確定。 |
+| Barbari / barbari | バルバリ | review | project | contextual | 民族・文化系統名。人物・集団は「バルバリ」、文化・装備は「バルバリの〜」「バルバリ〜」等。 |
+| Numeri / numeri | ヌーメリ | review | project | contextual | 民族・文化系統名。防具名では「ヌーメリ鎧」等。旧「ヌメリ」は用語統一QAで修正対象。 |
+| Thracian | トラキア | draft | project | contextual | 民族・出身地に関する呼称・形容詞。人物を指す場合は「トラキア人」、形容では「トラキアの〜」等、文脈に応じて処理する。 |
+| Imperial | 帝国 | draft | project | contextual | 帝国に属することを示す形容詞・呼称。言語では「帝国語」、軍・制度では「帝国〜」、人物・文化・技術では文脈に応じて処理する。 |
+| Mantra of Suspending The Ordinary Functioning Of | 通常機能停止のマントラ | approved | user | fixed | 古代の機械操作に用いるマントラ。Quest_Abyss_02_Consoleで使用。ある機能を停止し、別の機能へ置き換える手順を含む。 2026-09-27ユーザー確定。 |
+| Mantra of Divine Guidance | 神授の導きのマントラ | approved | user | fixed | 古代の機械操作に用いるマントラ。Quest_Abyss_02_Consoleで使用。「黄金の矢」への言及を含む。 2026-09-27ユーザー確定。 |
+| Mantra of Actions and Reactions | 作用と反作用のマントラ | approved | user | fixed | 古代の機械操作に用いるマントラ。Quest_Abyss_02_Consoleで使用。正しい順序で連鎖反応を起こす手順を記す。 2026-09-27ユーザー確定。 |
+| Gift | 恩寵 | approved | user | fixed | 古代の儀式で選ばれた者に授けられる超常的な力・能力。物品ではなく、上位存在から授けられる力というニュアンス。Quest_Abyss_01で使用。 |
+| Mykkos | ミュッコス | approved | user | fixed | 人名。エモラスと因縁のある襲撃者の首領。 2026-09-26ユーザー確定。 |
+| hoplitai | ホプリタイ | approved | user | fixed | 槍を主武器とする戦士集団・呼称。Quest_Arena_01でサルペドンの所属として使用。 2026-09-27ユーザー確定。 |
+| The Hundred | 百人衆 | approved | user | fixed | 峠に残って戦うオルドゥ戦士たちへ与える名誉称号。Hundred Swords（百剣団）とは別。 2026-09-27ユーザー確定。 |
+| reliquary | 聖遺物箱 | approved | user | fixed | Quest_HA_Pass_03で、ザメディの塔を開く赤い球体を収めた青銅製の容器。 2026-09-27ユーザー確定。 |
+| Severus | セヴェルス | approved | user | fixed | Quest_HD2_01でカリナスの古参護衛として言及される人物名。 旧「セウェルス」から「セヴェルス」へ変更。 2026-09-26ユーザー確定。 |
+| Decius | デキウス | approved | user | fixed | Quest_HD2_01でカリナスの若い護衛として言及される人物名。 2026-09-26ユーザー確定。 |
+| Marcellus | マルケルス | approved | user | fixed | Quest_HD2_01で前年にマラリアで死亡したカリナスの元護衛として言及される人物名。 2026-09-26ユーザー確定。 |
+| Bracchus | ブラッカス | approved | user | fixed | Quest_HD2_04で登場するダラタン家側の人物名。 2026-09-26ユーザー確定。 |
+| healing machine | 治療装置 | approved | user | fixed | Quest_HealingMachine_01〜02に登場する古代の医療装置。イオラが修復し、レヴィルの治療に使用。 2026-09-27ユーザー確定。 |
+| coughing sickness | 咳病 | draft | project | fixed | レヴィルが患う、血を吐く症状を伴う病。Quest_HealingMachine_02。 |
+| Shorty | ショーティ | approved | user | fixed | Quest_IG1で帝国衛兵団の補給係として登場する人物名。 2026-09-26ユーザー確定。 |
+| Charter | 憲章 | approved | user | fixed | 帝国衛兵団の権限と制約を定めた政治・軍事上の基本文書。Quest_IG2以降で重要。 2026-09-27ユーザー確定。 |
+| the Bull | “雄牛” | approved | user | fixed | カリナスの異名。荒々しく正面から戦う戦歴に由来。 2026-09-26ユーザー確定。 |
+| Erastus | エラストゥス | approved | user | fixed | Quest_IG3_PostPalaceでアウレリアン家の使者として登場する人物名。 2026-09-26ユーザー確定。 |
+| Weasel | ウィーゼル | approved | user | fixed | Quest_IG8_02〜03でグラブリオの部下として登場する人物名。 2026-09-26ユーザー確定。 |
+| Iolus | イオルス | approved | user | fixed | Quest_MgTestでブラッカスと組む門衛。後のQuest_TG3_04にも登場。 2026-09-26ユーザー確定。 |
+
+
+
+
+2026-09-26 翻訳完了時追加語
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| commanding fire elementals to bless ore | 火の精霊に鉱石の祝福を命じる | review | project | fixed | マントラ名。本文では「火の精霊に鉱石の祝福を命じるマントラ」。 |
+| Camilla Domitia Planca | カミラ・ドミティア・プランカ | approved | user | fixed | Lady Camilla。貴族女性。 2026-09-26ユーザー確定。 |
+| Anthea | アンテア | approved | user | fixed | Lady Anthea。貴族女性。 2026-09-26ユーザー確定。 |
+| Holy Nabupolassar | 聖ナブポラッサル | approved | user | fixed | Nabupolassar の宗教的尊称。基礎人名 Nabupolassar → ナブポラッサル は既存用語集に登録済み。 2026-09-26ユーザー確定。 |
+| Prophet Nabupolassar | 預言者ナブポラッサル | approved | user | fixed | Nabupolassar を預言者として指す場合の表記。 2026-09-26ユーザー確定。 |
+| Zenon | ゼノン | approved | user | fixed | 過去の Work 既訳（例: 1282, 1293, 6987）で一貫してゼノン。 2026-09-26ユーザー確定。 |
+| murmillo | ムルミッロ | approved | user | fixed | Work既訳で一貫（例: 7, 8014）。正本用語集への登録漏れ。 2026-09-27ユーザー確定。 |
+| schematics | 設計図 | approved | user | fixed | 製作・武器・防具の設計情報。旧「製作図」は用語統一QAで「設計図」へ統一。 2026-09-27ユーザー確定。 |
+| Sentius | センティウス | approved | user | fixed | Teron_Guards_01。ダラタン側の人物名。 2026-09-26ユーザー確定。 |
+| Awakened | 覚醒者 | draft | project | fixed | ZGT_Awakened_01。古代施設で休眠状態から起動した人物の話者名。 |
+| Protocol Zeta | ゼータ・プロトコル | approved | user | fixed | ZGT_Awakened_01。休眠・生命維持に関する古代の手順名。 2026-09-27ユーザー確定。 |
+| Agathoth the Betrayer | 裏切り者アガトス | approved | user | fixed | Agathoth の異称。Meru が聞いた声による呼称。 2026-09-27ユーザー確定。 |
+| Agathoth the Artificer | 工匠アガトス | approved | user | fixed | Artificer → 工匠 の既存用語方針に従う異称。 2026-09-27ユーザー確定。 |
+| High Inquisitor | 異端審問長 | approved | user | fixed | Varro の役職。Inquisition → 異端審問局 と対応。2026-09-26ユーザー確定。 |
+| Carbo | カルボ | approved | user | fixed | Work既訳で一貫（例: rows 1009, 2164, 10710）。 2026-09-26ユーザー確定。 |
+| Antonius Messalla | アントニウス・メッサラ | approved | user | fixed | Zenon_01。かつてゼノンが勤めていた交易会社の経営者。 2026-09-26ユーザー確定。 |
+| Flavius | フラヴィウス | approved | user | fixed | Work既訳で定着（例: rows 1320, 1419, 7037）。テロンの市衛兵隊長。 旧「フラウィウス」から「フラヴィウス」へ変更。Work既訳の旧表記は後続QA対象。2026-09-26ユーザー確定。 |
+| Darabus | ダラブス | approved | user | fixed | teron_palace_TA。ダラタン家屋敷の使用人。宮殿潜入用の服とアンフォラを取引する老人。 2026-09-26ユーザー確定。 |
+| Aragont | アラゴント | approved | user | fixed | teron_palace_TA。主人公が衛兵になりすます分岐で言及される人物名。第二大隊所属。 2026-09-26ユーザー確定。 |
+
+
+
+
+2026-09-26 用語集監査で追加した人物名・短縮形
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Mercato | メルカト | approved | user | fixed | Mercato Breni の短縮形。 2026-09-26ユーザー確定。 |
+| Bass | バス | approved | user | fixed | Centurion Bass。Bassar（バッサル）とは別人。 2026-09-26ユーザー確定。 |
+| Quintus | クィントゥス | approved | user | fixed | MDN_Quest_BasilTG_Quintus の人物名。Quintus Valerius Corvus とは別人。表記は「クィントゥス」で2026-09-26ユーザー確定。 |
+| Aziz | アジズ | approved | user | fixed | 人名。Aziz_01。2026-09-26ユーザー確定。 |
+| Domitius | ドミティウス | approved | user | fixed | Domitius Ulpius の短縮形として使用。 2026-09-26ユーザー確定。 |
+| Maximus | マクシムス | approved | user | fixed | Maximus Septimius Helva の短縮形。 2026-09-26ユーザー確定。 |
+| Vitus | ヴィトゥス | approved | user | fixed | 人名。帝国衛兵団の補給係。2026-09-26ユーザー確定。 |
+| Zebeniros | ゼベニロス | approved | user | fixed | 人名。マードランの商人。2026-09-26ユーザー確定。 |
+| Camilla | カミラ | approved | user | fixed | Camilla Domitia Planca の短縮形。 2026-09-26ユーザー確定。 |
+| Neros | ネロス | approved | user | fixed | 人名。2026-09-26ユーザー確定。 |
+| Tiberius | ティベリウス | approved | user | fixed | 人名。Tiberius Catulus を含む同名人物がいるため、人物同定は文脈で行う。 2026-09-26ユーザー確定。 |
+| Yazad | ヤザド | approved | user | fixed | 人名。NPC_Yazad_01。2026-09-26ユーザー確定。 |
+| Masala | マサラ | approved | user | fixed | 人名。Centurion Masala。Quest_TG6_03で複数回確認。2026-09-26ユーザー確定。 |
+| Hezbenus | ヘズベヌス | approved | user | fixed | 人名。Cassiusが引用する戦史の Lord Hezbenus。既存review訳で確認。2026-09-26ユーザー確定。 |
+| Massalus | マッサルス | approved | user | fixed | 人名。Lord Massalus。複数のWork訳で一致。2026-09-26ユーザー確定。 |
+| Varus | ヴァルス | approved | user | fixed | 人名・家名の構成要素。Gaius Cornelius Varus / Lord Varus。House Varus は別項目で管理。 2026-09-26ユーザー確定。 |
+| Belios | ベリオス | approved | user | fixed | 人名。Master Belios。Cado会話で反復確認。2026-09-26ユーザー確定。 |
+| Meleagros | メレアグロス | approved | user | fixed | 人名。Master Meleagros。Quest_TG6_03で反復確認。2026-09-26ユーザー確定。 |
+| Messalla | メッサラ | approved | user | fixed | Antonius Messalla の短縮形。Master Messalla として使用。 2026-09-26ユーザー確定。 |
+| Remus | レムス | approved | user | fixed | 人名。Master Remus。Quest_TG6_03で反復確認。2026-09-26ユーザー確定。 |
+| Temor | テモル | approved | user | fixed | 人名。Marcus Valla 配下。Master Temor として使用。 2026-09-26ユーザー確定。 |
+| Asmara | アスマラ | approved | user | fixed | 地名。滅亡した都市。複数会話で反復確認。 2026-09-27ユーザー確定。 |
+| Crassus | クラッサス | approved | user | fixed | 2026-09-26ユーザー確定。人名・家名の構成要素。Lord Crassus 等で使用。House Crassus は「クラッサス家」。Protected Token 内の crassus は翻訳しない。 |
+| Amerius | アメリウス | approved | user | fixed | Caius Amerius の短縮形。NPC_Aemolas関連会話などで反復確認。 2026-09-26ユーザー確定。 |
+| Gracchus | グラックス | approved | user | fixed | Red Gracchus の短縮形。複数会話で反復確認。 2026-09-26ユーザー確定。 |
+| Ammanas | アンマナス | approved | user | fixed | Cassiusが引用する戦史・著者名。既存review訳で確認。 2026-09-26ユーザー確定。 |
+| Zaghoss | ザゴス | approved | user | fixed | 戦史中の地名・戦場名。既存review訳で確認。 2026-09-27ユーザー確定。 |
+| Galatians | ガラティア人 | approved | user | fixed | 戦史中の民族・集団名。既存review訳で確認。 2026-09-27ユーザー確定。 |
+| Kaeso | カエソ | approved | user | fixed | 人名。Quest_TG1_03で反復登場し、Work訳は「カエソ」で一致。2026-09-26ユーザー確定。 |
+| Bennie | ベニー | approved | user | fixed | 人名。Hellgateおよび神格関連クエストで反復登場し、Work訳は「ベニー」で一致。 2026-09-26ユーザー確定。 |
+| Gnaeus Laenas | グナエウス・ラエナス | approved | user | fixed | 人名。Caer-Torから派遣される帝国衛兵団の高官。Work訳で反復確認。 2026-09-26ユーザー確定。 |
+| Laenas | ラエナス | approved | user | fixed | Gnaeus Laenas の短縮形。複数会話で単独使用。 2026-09-26ユーザー確定。 |
+| Reggie | レジー | approved | user | fixed | Regulus の愛称。本人が `you can call me Reggie` と名乗り、後続会話でも反復使用。 2026-09-26ユーザー確定。 |
+| the Witch / Witch | 魔女 | approved | user | contextual | Azra の過去の異名。大文字・固有呼称としての Witch は「魔女」。一般名詞の witch へ機械適用しない。 2026-09-26ユーザー確定。 |
+| The Butcher | 肉屋 | approved | user | fixed | 闘技場戦士の通り名。元々本物の butcher だったという説明と掛詞になるため「肉屋」を採用。既存draftの「屠殺屋」は用語統一QA対象。 2026-09-26ユーザー確定。 |
+| Gaius Aetius Paullus | ガイウス・アエティウス・パウルス | approved | user | fixed | Paullus のフルネーム。複数会話で反復使用。 2026-09-26ユーザー確定。 |
+| Maccalus | マッカルス | approved | user | fixed | Mack the Knife の本名。Quest_Arena_01で明示。 2026-09-26ユーザー確定。 |
+
+
+
+
+| Serenas the Victorious | “勝利者”セレナス | approved | user | fixed | Serenas の反復する異名付き固有呼称。Workで7件確認し、「“勝利者”セレナス（卿）」として一貫。文中の敬称 Lord は文脈に応じて付加する。 2026-09-26ユーザー確定。 |
+| Wastes | 荒野 | approved | user | fixed | 大文字の固有地域名。Workで5件確認し、既存訳は「荒野」で一致。一般名詞 wastes へは機械適用しない。 2026-09-27ユーザー確定。 |
+
+
+| Linos the Skull | “髑髏のリノス” | approved | user | fixed | Linos の反復する異名付き固有呼称。Workで3件確認し、既存訳は「“髑髏のリノス”」で一致。 2026-09-26ユーザー確定。 |
+| Manius Cotta | マニウス・コッタ | approved | user | fixed | 人名。Neleos会話と主人公のなりすまし選択肢で同一人物として2件確認。 2026-09-26ユーザー確定。 |
+| Lorenza Calani / Lorenza Callani | ロレンツァ・カラニ | approved | user | fixed | Lorenza のフルネーム。原文に Calani / Callani の綴り揺れがあるが同一人物。日本語は「ロレンツァ・カラニ」に統一。 2026-09-26ユーザー確定。 |
+| Marcus Carrinas | マルクス・カリナス | approved | user | fixed | Carrinas のフルネーム。Workで複数回確認し、既存訳は「マルクス・カリナス」で一致。 2026-09-26ユーザー確定。 |
+| Gods’ Kingdom | 神々の王国 | approved | user | fixed | メル派の宗教・政治思想で反復される固有概念。`Gods’ Kingdom` / `Kingdom of Gods` / `Kingdom of the Gods` は同一概念として「神々の王国」に統一する。Workで各表現を確認。 2026-09-26ユーザー確定。 |
+| Atrion | アトリオン | approved | user | fixed | 地名。Manius Cotta の出身地として2件確認。2026-09-27ユーザー確定。 |
+| Trade district | 交易地区 | approved | user | fixed | マードランの地区名。Workで反復。既存draftに「交易区」1件があり、後続の用語統一QA対象。 2026-09-27ユーザー確定。 |
+| Palace district | 宮殿地区 | approved | user | fixed | マードランの地区名。Workで多数反復。technical_review の制御ラベル `END - palace district` は訳さない。 2026-09-27ユーザー確定。 |
+| Arena district | 闘技場地区 | approved | user | fixed | マードランの地区名。Workで反復確認。 2026-09-27ユーザー確定。 |
+| Temple district | 聖堂地区／神殿地区 | approved | user | contextual | ガネザールの現行宗教地区は「聖堂地区」。古代・異教・一般的な temple に由来する地区は「神殿地区」。機械的一括置換禁止。2026-09-26ユーザー確定。 |
+| Slums | スラム | approved | user | fixed | マードランの地区名として大文字で反復。`Maadoran Slums` は「マードランのスラム」。一般名詞 slums へ機械適用しない。 2026-09-27ユーザー確定。 |
+
+
+| Yazid | ヤジド | approved | user | fixed | 闘技場王者 Al-Sahir の本名。Quest_Arena_01で明示。 2026-09-26ユーザー確定。 |
+| Dalia | ダリア | approved | user | fixed | 人名。Gaelius 周辺の娼婦。Quest_TG6_03で複数回確認し、Work訳は「ダリア」で一致。 2026-09-26ユーザー確定。 |
+| Vard | ヴァル | approved | user | fixed | Vardanis の親しい呼び方・短縮形。略称らしさと親しみのある響きを優先して「ヴァル」を採用。2026-09-26ユーザー確定。 |
+| Ashkaan | アシュカーン | approved | user | fixed | 地名。宝石の産地・商人の出身地として複数の出自導入会話で確認。2026-09-27ユーザー確定。 |
+| Bernie | バーニー | approved | user | fixed | Berengarius の愛称。英語 Bernie と Bennie は別名であり、別人 Bennie→ベニーとの表示衝突を避けるため「バーニー」を採用する。現Workの「ベニー」7件は後続の用語統一QA対象。 2026-09-26ユーザー確定。 |
+| The Art of Deceptive Arguments | 『詭弁術』 | approved | user | fixed | Linos が渡す書物・巻物の固有題名。分岐違いの2件で既存訳は『詭弁術』で一致。2026-09-27ユーザー確定。 |
+| Ancients | 古代人 | approved | user | contextual | 大文字で古代文明の人々を指す用法。Workで「古代人」を確認。一般的な ancients へ機械適用しない。 2026-09-27ユーザー確定。 |
+
+
+| Zeb | ゼブ | approved | user | fixed | Zebeniros の短縮呼称としてNPC_Isandros_01で2件確認。Work訳は「ゼブ」で一致。 2026-09-26ユーザー確定。 |
+| Nasir's Carpet Diem | ナシルの『カルペット・ディエム』 | approved | user | fixed | マードランの絨毯店名。NPC_Nasir_01で反復し、既存訳は一致。 2026-09-27ユーザー確定。 |
+| Nero's Stimulant | ネロの刺激剤 | approved | user | fixed | vignette_knightで授与される旧時代の薬品の固有名。現行itemtext由来GLOSSARY_ITEMSには独立項目がないため、会話内固有名称としてコア側で暫定管理。 2026-09-27ユーザー確定。 |
+
+
+| Imperial Army | 帝国軍 | approved | user | fixed | 帝国衛兵団が再び統一帝国の正規軍となった状態を指す組織・制度名。Work表示対象5件はいずれも「帝国軍」で一致。 2026-09-26ユーザー確定。 |
+| Templars | 聖堂騎士団 | approved | user | fixed | メルが帝国衛兵団を宗教体制の守護戦力として再定義する際の固有組織名。2026-09-26ユーザー確定。 |
+| Commander | 司令官／指揮官 | approved | user | contextual | 大文字で人名に付く称号 `Commander Carrinas` / `Commander Carbo` 等は「〜司令官」を基本とする。一般名詞・役割説明としての commander は「指揮官」等を文脈で用いる。Workでは大文字Commander 98件の大半が「司令官」。機械的一括置換は禁止。 2026-09-26ユーザー確定。 |
+
+
+
+
+| Old Empire | 旧帝国 | approved | user | fixed | 大戦以前の帝国を指す主要歴史用語。Work表示対象20件はいずれも「旧帝国」で一致。 2026-09-26ユーザー確定。 |
+| Empire of Men | 人の帝国 | approved | user | fixed | メル派の宗教的対比で用いられる旧来の人間支配秩序の固有呼称。Work表示対象3件はいずれも「人の帝国」で一致。 2026-09-26ユーザー確定。 |
+
+
+
+
+| Empire | 帝国 | approved | user | fixed | 大文字で国家・帝国体制を指す基本語。Workで大文字 `Empire` を含む表示対象143件すべての有効日本語に「帝国」を確認。`Old Empire` 等の複合固有語は各専用項目を優先する。 2026-09-26ユーザー確定。 |
+| Emperor | 皇帝 | approved | user | fixed | 帝国の君主称号。Workで大文字 `Emperor` を含む表示対象32件すべての有効日本語に「皇帝」を確認。 2026-09-26ユーザー確定。 |
+| Great War | 大戦 | approved | user | fixed | 世界崩壊につながった歴史上の大戦。Workの厳密一致20件すべてで「大戦」を基礎に訳され、1件のみ口語的に「大戦争」。後者は後続QA候補。 2026-09-26ユーザー確定。 |
+| Noble Houses | 諸侯家 | approved | user | fixed | 主要な領地支配家の集合呼称。Work厳密一致14件を確認。House Daratan / House Aurelian 等の家門・政治主体を指すため「家」を残して「諸侯家」とする。`Great Houses` は別制度・別集団ではなく、同じ主要諸侯家群を格式・有力さの面から強調する表現として扱う。既存の「名家」は後続QA候補。 2026-09-26ユーザー確定。 |
+| Great Houses | 大諸侯家／諸侯家 | approved | user | contextual | Work厳密一致5件を確認。`Noble Houses` と基本的に同じ主要諸侯家群を指し、Great は歴史的格式・有力さを強調する。強調が必要なら「大諸侯家」、`the seven Great Houses` は「七大諸侯家」、日本語上Greatの強調が不要なら「諸侯家」とする。別制度・別集団としては扱わない。既存の「名家」「大貴族」等は後続QA候補。 2026-09-26ユーザー確定。 |
+
+
+| Lakia | ラキア | approved | user | fixed | 地名。Cassiusが引用する戦史に登場するNazvian Sea沿岸の町。`Al-Akia` と同一地点かを議論するため名称の区別が重要。Work2件は「ラキア」で一致。 2026-09-27ユーザー確定。 |
+| Nazvian Sea | ナズヴィア海 | approved | user | fixed | 地名・海域名。Lakiaの所在地として戦史に登場。既存Work訳「ナズヴィア海」を採用。 2026-09-27ユーザー確定。 |
+| Jellal | ジェラル | approved | user | fixed | 人名。傭兵団 Jellal’s Lions の指導者。複数会話で反復し、Work訳は「ジェラル」で一致。2026-09-26ユーザー確定。 |
+| Khan | ハーン | approved | user | fixed | オルドゥの君主・指導者称号。`Great Khan` は「大ハーン」。Thorgul を単独で `Khan` と呼ぶ用例も同じ称号として扱う。2026-09-27ユーザー確定。 |
+
+
+監査メモ
+新登録基準に基づき、アイテム名称との重複、一般speaker／一般職業ラベル、単発の説明表現を順次整理する。Great White Hunter は単発の比喩的表現として除外した。
+Aegis は複数イベントに再登場する固有装備名として「アイギス」review / fixed に整理した。
+Numeri / numeri → ヌーメリ に合わせ、Leather Numeri armor / Studded Numeri armor の旧「ヌメリ」表記を修正。
+Ganezzar / Castle Ganezzar はWork実データと既存review訳を再検討し、「ガネザー」「ガネザー城」review系へ整理済み。
+Protected Token・technical_review・一般翻訳規則は AoD_STYLE_GUIDE を正本とし、この用語集には重複させない。
+登録過剰監査: `holy altars` はQuest_DariusTomb_03内の単発説明表現で、独立した名称として再利用する根拠がないためコア用語集から除外した。
+綴り・形態変種: `Thoragoth` は Thor-Agoth と同一、`Decanii` は Decanus の複数形として既存項目のnotesへ統合した。
+登録過剰監査: `glyph language` / `summoning artefact` は各1場面の説明的表現で、別箇所で同一名称を照合する必要性が確認できないためコア用語集から除外した。`Boatmen` / `Forty Thieves` の短縮形は新規項目を増やさず既存組織項目のnotesへ統合した。
+登録過剰監査: `court cartographer` はFengの同一会話分岐内だけで使われる一般的な役職説明、`Cannabis sativa` と `mandrake extract` は各1場面の説明的な植物／薬剤表現で、別箇所との名称照合が不要と判断しコア用語集から除外した。
+登録過剰監査: `berserk draught` / `acid` / `neurostimulators` / `dried blood mushroom` は、アイテム系概念の会話内別表現または一般語であり、コア用語として独立固定する必要性が低いため除外した。対応するインベントリ名称は AoD_GLOSSARY_ITEMS 側で管理する。
+登録過剰監査: `old science` / `gravity well` / `ore smelter` は単発または同一イベント内の一般的な説明・技術語で、別箇所との名称照合が必要な固有用語としての根拠が不足するため除外した。`shadowy gates` / `thaumaturgy` / `coughing sickness` など、設定上の固有性・再登場性がより強い語は維持した。
+登録漏れ監査: `Empire` / `Emperor` / `Great War` をWork全体の反復と訳の一致から review / work / fixed として追加した。`Noble Houses` / `Great Houses` はWork文脈を比較し、同じ主要諸侯家群を指しつつ Great が格式・有力さを強調する関係として整理した。
+高優先度hold解消: `Noble Houses` は政治的な家門・領主家の集合呼称として「諸侯家」review / fixed、`Great Houses` は同じ諸侯家群を強調する表現として「大諸侯家／諸侯家」review / contextual に整理した。`approved` には昇格せず、Work本文の既存「名家」「大貴族」等は後続QAで個別確認する。
+登録妥当性監査: `sacred formulae` は同一会話内だけの説明的表現、`airag` は単発の飲料説明であり、別箇所との名称照合が不要なためコア用語集から除外した。`Lakia` / `Nazvian Sea` / `Jellal` / `Khan` は地名・人名・称号として再利用または識別上の管理価値があるため追加した。
