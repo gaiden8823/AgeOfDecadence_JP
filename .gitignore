@@ -12,6 +12,13 @@
 !/tools/aod_tool.cmd
 !/tools/日本語化ツール.cmd
 !/tools/使い方.md
+!/tools/font_basis.py
+!/tools/test_font_basis.py
+!/tools/font_basis/
+/tools/font_basis/*
+!/tools/font_basis/main.cs
+!/tools/font_basis/font.module.taml
+!/tools/font_basis/検証手順.md
 !/translations/
 /translations/*
 !/translations/reviewed_translation_targets.csv
@@ -20,4 +27,5 @@
 !/guides/
 /guides/*
 !/guides/*.txt
+!/guides/HANDOFF.md
 # Images include original game textures; review rights before adding individually.

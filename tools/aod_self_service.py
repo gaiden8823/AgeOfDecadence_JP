@@ -54,7 +54,7 @@ def select_translations(rows,include_drafts=False):
     for original in rows:
         if blocked(original):counts['skipped_hold_rows']+=1;continue
         row=dict(original);target=row.get('target_ja','')
-        if not target.strip() and include_drafts and row.get('status')=='draft':
+        if not target.strip() and include_drafts and row.get('status') in {'draft','review','approved','existing_mod'}:
             target=row.get('target_draft','')
             if target.strip():counts['draft_rows_used']+=1
         if not target.strip():continue
@@ -179,7 +179,38 @@ def layout_overrides(d,name):
             setfield(o,'extent',f'{w+extra} {h}');setfield(o,'position',f'{x-extra//2} {y}')
         if name.startswith('maps/Map') and o['class']=='fbMapButtonCtrl':
             w,h=map(int,fields['extent'].text.split())
-            setfield(o,'extent',f'{round(w*1.5)} {h}')
+            width=max(round(w*1.5),260) if fields.get('text') and fields['text'].text=='Boatmen' else round(w*1.5)
+            setfield(o,'extent',f'{width} {h}')
+        if name=='art/gui/optionsDlg.english.gui.dso':
+            text=fields['text'].text if 'text' in fields else ''
+            if fields.get('internalName') and fields['internalName'].text=='OptGameplayPane':
+                setfield(o,'position','19 84');setfield(o,'extent','420 320')
+            if text in {'Camera Rot. Speed:','Animation Speed:','Combat Anim Speed:','Grid Opacity:'}:
+                w,h=map(int,fields['extent'].text.split());setfield(o,'extent',f'160 {h}')
+            if obj in {'OptMouseSensitivity','OptCombatAnimSpeedSlider','OptAnimSpeedSlider','OptGridOpacitySlider'}:
+                x,y=map(int,fields['position'].text.split());w,h=map(int,fields['extent'].text.split())
+                setfield(o,'position',f'164 {y}');setfield(o,'extent',f'236 {h}')
+            if o['class']=='GuiTextCtrl' and text in {'0.5x','1x','2x','3x','4x','0%','100%'}:
+                x,y=map(int,fields['position'].text.split());w,h=map(int,fields['extent'].text.split())
+                if y in {45,85,122}:
+                    x={'0.5x':174,'1x':208,'2x':274,'3x':340,'4x':385,'0%':184,'100%':365}[text]
+                    w=55 if text=='100%' else 35
+                    setfield(o,'position',f'{x-20} {y}');setfield(o,'extent',f'{w} {h}')
+            if text in {'Hide Dialogue Checks','Disable Tutorial'}:
+                x,y=map(int,fields['position'].text.split());w,h=map(int,fields['extent'].text.split())
+                setfield(o,'position',f'190 {y}');setfield(o,'extent',f'190 {h}')
+            if text=='Hardware Cursor':
+                x,y=map(int,fields['position'].text.split());w,h=map(int,fields['extent'].text.split())
+                setfield(o,'position',f'195 {y}');setfield(o,'extent',f'185 {h}')
+            if obj=='OptGraphicsDriverMenu':
+                w,h=map(int,fields['extent'].text.split());setfield(o,'extent',f'297 {h}')
+            if text=='Apply Graphics':
+                x,y=map(int,fields['position'].text.split());w,h=map(int,fields['extent'].text.split())
+                setfield(o,'position',f'159 {y}');setfield(o,'extent',f'190 {h}')
+            if text in {'x0','x2.2'}:
+                x,y=map(int,fields['position'].text.split());w,h=map(int,fields['extent'].text.split())
+                setfield(o,'position',f'{72 if text=="x0" else 307} {y}')
+                setfield(o,'extent',f'{35 if text=="x0" else 55} {h}')
         if name=='TutorialOverlay.english.gui.dso':
             extra=130
             if obj in {'TO_Window','TO_Text','TO_MouseCatcher'}:
@@ -267,7 +298,34 @@ def patch_xml(blob,entries):
     for start,end,value in sorted(edits,reverse=True):text=text[:start]+value+text[end:]
     ET.fromstring(text)
     return (b'\xef\xbb\xbf' if blob.startswith(b'\xef\xbb\xbf') else b'')+text.encode('utf-8')
-def build(config,inputs,include_dialogues=False,include_drafts=False):
+def language_manifest_entries(blob,entries,label):
+    ins=DSO(blob).instructions
+    matches=[i for i,j in zip(ins,ins[1:]) if i.op=='LOADIMMED_STR' and j.op=='SETCURVAR_CREATE' and j.identifier=='$localization_visible_name']
+    if len(matches)!=1:fail('Language manifest display-name assignment is ambiguous')
+    i=matches[0]
+    if i.table!=0:fail('Unexpected language manifest string table')
+    locator='global:'+str(i.string_offset)
+    result=[dict(e) for e in entries if e['locator']!=locator]
+    result.append({'id':'language-display-name','locator':locator,'source_raw':i.text,'target_ja':label})
+    return result
+
+def prepare_dialogue_rows(rows,include_drafts=False):
+    prepared=[];draft_ids=[];held_ids=[]
+    for original in rows:
+        r=dict(original)
+        target=r.get('target_ja','')
+        if blocked(r):
+            target='';held_ids.append(r['id'])
+        elif not target.strip() and include_drafts and r.get('status') in {'draft','review','approved','existing_mod'}:
+            target=r.get('target_draft','')
+            if target.strip():draft_ids.append(r['id'])
+        if target.strip():validate_target(r['source'],target,r['id'])
+        r['target_ja']=target
+        r['target_draft']=''
+        prepared.append(r)
+    return prepared,{'dialogue_draft_ids':draft_ids,'dialogue_draft_rows_used':len(draft_ids),'dialogue_held_ids':held_ids}
+
+def build(config,inputs,include_dialogues=False,include_drafts=True,include_dialogue_drafts=True):
     SELF.mkdir(parents=True,exist_ok=True)
     # A failed new build must not accidentally install an older successful one.
     savejson(SELF/'latest_build.json',{'status':'BUILD_IN_PROGRESS','build':None})
@@ -308,21 +366,24 @@ def build(config,inputs,include_dialogues=False,include_drafts=False):
             if e['locator'] in unique and unique[e['locator']]['target_ja']!=e['target_ja']:fail('Conflicting locator')
             unique[e['locator']]=e
         entries=list(unique.values())
+        language_manifest=name=='data/localization/localization_manifest.english.cs.dso'
+        if language_manifest:entries=language_manifest_entries(blob,entries,'English - Official')
         if name.endswith('.dso'):built=patch_dso(blob,entries,name)
         elif name.endswith('.xml'):built=patch_xml(blob,entries)
         else:
             text=decode_text(blob).lstrip('\ufeff');built=render_fonts(rewrite_script(text,entries)).encode('utf-8')
         rel=runtime_path(container,name);put(rel,built)
         # Both loader paths are used by the existing mixed-language test setup.
-        if '.english.' in rel:put(rel.replace('.english.','.japanese.'),built)
+        if '.english.' in rel:
+            japanese=patch_dso(blob,language_manifest_entries(blob,entries,'日本語'),name) if language_manifest else built
+            put(rel.replace('.english.','.japanese.'),japanese)
     dialogue_count=0
+    dialogue_selection={'dialogue_draft_ids':[],'dialogue_draft_rows_used':0,'dialogue_held_ids':[]}
     if include_dialogues:
         p=choose(inputs,'dialogue_translation')
         if not p:fail('Put dialogue_translation.csv or .xlsx in input first')
         dr=read_table(p,{'id','source','source_hash','source_file','target_ja','status'})
-        for r in dr:
-            if r.get('target_ja','').strip():validate_target(r['source'],r['target_ja'],r['id'])
-            if 'target_draft' in r:r['target_draft']=''
+        dr,dialogue_selection=prepare_dialogue_rows(dr,include_dialogue_drafts)
         temp=out/'dialogue_input.csv';writecsv(temp,dr,list(dr[0]))
         result=subprocess.run([sys.executable,str(ROOT/'build_full_dialogues.py'),'--archive',str(source/'scripts.aod'),'--csv',str(temp),'--out-dir',str(out/'dialogues')],capture_output=True,text=True,encoding='utf-8')
         if result.returncode:fail('Dialogue build failed: '+result.stdout+result.stderr)
@@ -333,7 +394,12 @@ def build(config,inputs,include_dialogues=False,include_drafts=False):
     manifest={'status':'BUILD_OK_NOT_GAME_TESTED','built_at':stamp,'source':str(source),'game':str(game),'translated_non_dialogue_rows':translated,'dialogue_files':dialogue_count,'scope':'text_only','include_non_dialogue_drafts':include_drafts,**selection_counts,'english_and_japanese_aliases':True,'requires_existing_font_setup':True,'files':[]}
     for f in sorted(payload.rglob('*')):
         if f.is_file():manifest['files'].append({'path':f.relative_to(payload).as_posix(),'sha256':digest(f.read_bytes())})
+    manifest.update(dialogue_selection)
+    manifest['dialogue_mode']='trial' if include_dialogue_drafts else 'adopted_only'
+    manifest['contains_unadopted_translations']=bool(include_drafts or include_dialogue_drafts)
     savejson(out/'manifest.json',manifest)
+    if include_drafts or include_dialogue_drafts:print('未承認の作業訳・レビュー訳も使用します。CSVの採用状態は変更していません。')
+    print('Dialogue draft rows used:',dialogue_selection['dialogue_draft_rows_used'])
     savejson(SELF/'latest_build.json',{'status':'READY','build':str(out)})
     print('Build ready:',out);print('Translated text:',translated,'; files:',len(manifest['files']));print('Skipped holds:',selection_counts['skipped_hold_rows'],'; drafts used:',selection_counts['draft_rows_used']);print('Text-only build. Game files have NOT been changed.')
     return out
@@ -362,6 +428,9 @@ def install(config,out,confirm=True):
         if r['path'].endswith('.dso'):
             companion=r['path'][:-4]
             if safe(game,companion).is_file() and companion not in {x['path'] for x in manifest['files']}:planned.append((companion,None,'remove_companion'))
+        elif r['path'].endswith(('.cs','.gui')):
+            cache=r['path']+'.dso'
+            if safe(game,cache).is_file() and cache not in {x['path'] for x in manifest['files']}:planned.append((cache,None,'remove_companion'))
     seen=set()
     for rel,newhash,action in planned:
         if rel in seen:continue
@@ -399,8 +468,8 @@ def rollback(backup,force=False):
         elif p.exists():p.unlink()
     state['state']='restored';savejson(backup/'restore.json',state);print('Restored previous files. Backup retained:',backup)
 def main():
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['build','install','restore','menu']);p.add_argument('--config',type=Path,default=SELF/'settings.json');p.add_argument('--input',type=Path,default=SELF/'input');p.add_argument('--build',type=Path);p.add_argument('--dialogues',action='store_true');p.add_argument('--drafts',action='store_true',help='Include non-dialogue draft text; held rows remain excluded');a=p.parse_args()
-    # Draft text is opt-in and applies only to non-dialogue strings.
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['build','install','restore','menu']);p.add_argument('--config',type=Path,default=SELF/'settings.json');p.add_argument('--input',type=Path,default=SELF/'input');p.add_argument('--build',type=Path);p.add_argument('--dialogues',action='store_true');p.add_argument('--drafts',action='store_true',help='Include non-dialogue draft text; held rows remain excluded')
+    p.add_argument('--dialogue-drafts',action='store_true',help='Trial dialogue build using drafts without changing CSV adoption state');a=p.parse_args()
     if LAYOUT and a.input==SELF/'input':a.input=INVENTORY
     config=json.loads(a.config.read_text(encoding='utf-8-sig'))
     for key in ('source','game'):
@@ -408,9 +477,9 @@ def main():
         if not value.is_absolute():config[key]=str((a.config.parent/value).resolve())
     a.input.mkdir(parents=True,exist_ok=True)
     if a.action=='menu':
-        print('1: 確定欄の文字列をビルド（ゲームは変更しません）\n2: 最新ビルドを反映（先にバックアップ）\n3: 直前の反映を元に戻す\n4: 会話の翻訳も含めてビルド\n5: 会話以外の下訳も含めてビルド\n0: 終了')
-        choice=input('番号: ').strip();a.action={'1':'build','2':'install','3':'restore','4':'build','5':'build'}.get(choice,'exit');a.dialogues=choice=='4';a.drafts=choice=='5'
-    if a.action=='build':build(config,a.input,a.dialogues,a.drafts)
+        print('1: 会話以外の訳をビルド（作業訳・レビュー訳も使用）\n2: 最新ビルドを反映（先にバックアップ）\n3: 直前の反映を元に戻す\n4: 会話も含めてビルド（作業訳・レビュー訳も使用）\n0: 終了')
+        choice=input('番号: ').strip();a.action={'1':'build','2':'install','3':'restore','4':'build','5':'build','6':'build'}.get(choice,'exit');a.dialogues=choice in {'4','6'};a.drafts=choice in {'5','6'};a.dialogue_drafts=choice=='6'
+    if a.action=='build':build(config,a.input,a.dialogues or a.dialogue_drafts,True,True)
     elif a.action=='install':
         if a.build:out=a.build
         else:

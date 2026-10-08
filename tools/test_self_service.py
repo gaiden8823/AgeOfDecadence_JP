@@ -5,6 +5,39 @@ from unittest.mock import patch
 import aod_self_service as tool
 
 class ToolTests(unittest.TestCase):
+    def test_review_draft_column_is_usable_without_approval(self):
+        row={'id':'review','source':'Hi','source_raw':'Hi','target_ja':'','target_draft':'確認済み候補','status':'review'}
+        before=dict(row)
+        self.assertEqual(tool.prepare_dialogue_rows([row],True)[0][0]['target_ja'],'確認済み候補')
+        self.assertEqual(tool.select_translations([row],True)[0][0]['target_ja'],'確認済み候補')
+        self.assertEqual(row,before)
+
+    def test_dialogue_modes_preserve_adoption_and_exclude_holds(self):
+        rows=[{'id':'draft','source':'Hi <x>','target_ja':'','target_draft':'下訳<x>','status':'draft'},
+              {'id':'review','source':'Hi','target_ja':'採用欄','target_draft':'別案','status':'review'},
+              {'id':'legacy','source':'Hi','target_ja':'継承訳','status':'existing_mod'},
+              {'id':'held','source':'END','target_ja':'不使用','target_draft':'不使用','status':'technical_review'}]
+        before=json.dumps(rows,ensure_ascii=False)
+        formal,fc=tool.prepare_dialogue_rows(rows)
+        trial,tc=tool.prepare_dialogue_rows(rows,True)
+        self.assertEqual([r['target_ja'] for r in formal],['','採用欄','継承訳',''])
+        self.assertEqual([r['target_ja'] for r in trial],['下訳<x>','採用欄','継承訳',''])
+        self.assertEqual(tc['dialogue_draft_ids'],['draft'])
+        self.assertEqual(fc['dialogue_draft_rows_used'],0)
+        self.assertEqual(json.dumps(rows,ensure_ascii=False),before)
+        with self.assertRaises(ValueError):tool.prepare_dialogue_rows([dict(rows[0],target_draft='タグなし')],True)
+
+    def test_language_manifest_alias_names_are_distinct(self):
+        ins=[SimpleNamespace(op='LOADIMMED_STR',table=0,string_offset=350,text='English - Official'),SimpleNamespace(op='SETCURVAR_CREATE',identifier='$localization_visible_name')]
+        entries=[{'locator':'global:350','source_raw':'English - Official','target_ja':'英語 - 公式'},{'locator':'global:1','target_ja':'別の訳'}]
+        with patch.object(tool,'DSO',return_value=SimpleNamespace(instructions=ins)):
+            en=tool.language_manifest_entries(b'',entries,'English - Official')
+            ja=tool.language_manifest_entries(b'',entries,'日本語')
+        self.assertEqual(en[-1]['target_ja'],'English - Official')
+        self.assertEqual(ja[-1]['target_ja'],'日本語')
+        self.assertEqual(entries[0]['target_ja'],'英語 - 公式')
+        self.assertEqual(ja[0],entries[1])
+
     def setUp(self):
         layout_patch=patch.object(tool,'LAYOUT',{})
         layout_patch.start();self.addCleanup(layout_patch.stop)
