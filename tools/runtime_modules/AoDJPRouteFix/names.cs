@@ -1,0 +1,65 @@
+// Exact display names: existing translations plus seven unapproved working drafts.
+function AoDJPRouteFix_translateName(%name) {
+   switch$ (%name) {
+      case "Aemolas": return "エモラス";
+      case "Assassin": return "暗殺者";
+      case "Aurelian Captain": return "アウレリアン家の隊長";
+      case "Aurelian Guard": return "アウレリアン家の衛兵";
+      case "Aurelian Legionary": return "アウレリアン家の軍団兵";
+      case "Aurelian Praetor": return "アウレリアン家のプラエトル";
+      case "Aurelian Soldier": return "アウレリアン家の兵士";
+      case "Aurelian Worker": return "アウレリアン家の作業員";
+      case "Bandit": return "山賊";
+      case "Bandit Leader": return "盗賊の首領";
+      case "Belios": return "ベリオス";
+      case "Bodyguard": return "護衛";
+      case "Caravan Guard": return "隊商の護衛";
+      case "Cassius": return "カッシウス";
+      case "Darabus": return "ダラブス";
+      case "Daratan Captain": return "ダラタン家の隊長";
+      case "Daratan Guard": return "ダラタン家の衛兵";
+      case "Daratan Spearman": return "ダラタン家の槍兵";
+      case "Decanus": return "十人隊長";
+      case "Decius": return "デキウス";
+      case "Elias": return "エリアス";
+      case "Erastus": return "エラストゥス";
+      case "Gang Member": return "一味の構成員";
+      case "Gate Crossbowman": return "門の弩兵";
+      case "Gate Guard": return "門の衛兵";
+      case "Gracius": return "グラキウス";
+      case "Guard": return "衛兵";
+      case "Imperial Captain": return "帝国軍の隊長";
+      case "Imperial Guard": return "帝国衛兵";
+      case "Imperial Guard Elite": return "帝国衛兵団の精鋭";
+      case "Imperial Soldier": return "帝国兵";
+      case "Kaeso": return "カエソ";
+      case "Livia": return "リヴィア";
+      case "Mercato": return "メルカト";
+      case "Mercenaries Leader": return "傭兵隊長";
+      case "Mercenary": return "傭兵";
+      case "Merchant": return "商人";
+      case "Misterious Guest": return "謎の客";
+      case "Mob Leader": return "群衆の指導者";
+      case "Mob Member": return "群衆の一員";
+      case "Neleos": return "ネレオス";
+      case "Nobleman": return "貴族";
+      case "Ordu": return "オルドゥ";
+      case "Pavola": return "パヴォラ";
+      case "Petras": return "ペトラス";
+      case "Prospector": return "探鉱者";
+      case "Quintus": return "クィントゥス";
+      case "Raider": return "略奪者";
+      case "Recruit": return "新兵";
+      case "Refugee": return "難民";
+      case "Rhaskos": return "ラスコス";
+      case "Slave": return "奴隷";
+      case "Sohrab": return "ソーラブ";
+      case "The old man": return "老人";
+      case "The woman": return "女";
+      case "The young spy": return "若い密偵";
+      case "Thief": return "盗賊";
+      case "Thug": return "ならず者";
+      case "Vardanis": return "ヴァルダニス";
+   }
+   return %name;
+}

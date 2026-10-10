@@ -29,3 +29,16 @@
 !/guides/*.txt
 !/guides/HANDOFF.md
 # Images include original game textures; review rights before adding individually.
+!/tools/runtime_modules/
+/tools/runtime_modules/**/*
+!/tools/runtime_modules/**/
+!/tools/runtime_modules/**/*.cs
+!/tools/runtime_modules/**/*.module.taml
+!/tools/release/
+/tools/release/*
+!/tools/release/*.py
+!/tools/release/*.md
+!/guides/*.md
+!/guides/audit_20261010/
+/guides/audit_20261010/*
+!/guides/audit_20261010/*.md

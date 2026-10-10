@@ -597,3 +597,17 @@ Protected Token・technical_review・一般翻訳規則は AoD_STYLE_GUIDE を�
 登録漏れ監査: `Empire` / `Emperor` / `Great War` をWork全体の反復と訳の一致から review / work / fixed として追加した。`Noble Houses` / `Great Houses` はWork文脈を比較し、同じ主要諸侯家群を指しつつ Great が格式・有力さを強調する関係として整理した。
 高優先度hold解消: `Noble Houses` は政治的な家門・領主家の集合呼称として「諸侯家」review / fixed、`Great Houses` は同じ諸侯家群を強調する表現として「大諸侯家／諸侯家」review / contextual に整理した。`approved` には昇格せず、Work本文の既存「名家」「大貴族」等は後続QAで個別確認する。
 登録妥当性監査: `sacred formulae` は同一会話内だけの説明的表現、`airag` は単発の飲料説明であり、別箇所との名称照合が不要なためコア用語集から除外した。`Lakia` / `Nazvian Sea` / `Jellal` / `Khan` は地名・人名・称号として再利用または識別上の管理価値があるため追加した。
+
+2026-10-10 マップ表示名の作業訳（未承認）
+| source_term | target_term | status | provenance | handling | notes |
+|---|---|---|---|---|---|
+| Calvus Home | カルヴス邸 | draft | ai_working_draft | contextual | マードランとEND_GaeliusのcursorText。人名Calvusの確定訳を継承。施設名全体は未承認。 |
+| Berengarius Gems | ベレンガリウスの宝石店 | draft | ai_working_draft | contextual | ガネザールの店舗表示。人名Berengariusの確定訳を継承。施設名全体は未承認。 |
+| Ganezzar Inn | ガネザールの宿屋 | draft | ai_working_draft | contextual | マップ施設表示。Ganezzarの確定訳を継承。表示名全体は未承認。 |
+| Ganezzar Blacksmith | ガネザールの鍛冶屋 | draft | ai_working_draft | contextual | マップ施設表示。Ganezzarの確定訳を継承。表示名全体は未承認。 |
+| Senna's Villa | センナの別邸 | draft | ai_working_draft | contextual | マードランの施設表示。Sennaの確定訳を継承。施設名全体は未承認。 |
+| Lorenza's Villa | ロレンツァの別邸 | draft | ai_working_draft | contextual | マードランの施設表示。Lorenzaの確定訳を継承。施設名全体は未承認。 |
+| 'Grab a Bite' Tavern | 酒場「ひと口亭」 | draft | ai_working_draft | contextual | マードランの酒場のcursorText。固有店名の作業訳。未承認。 |
+| Quintus' Palace of Pleasure | クィントゥスの歓楽の館 | draft | ai_working_draft | contextual | マードランの施設表示。Quintusの確定訳を継承。施設名全体は未承認。 |
+| Maadoran Blacksmith | マードランの鍛冶屋 | draft | ai_working_draft | contextual | マップ施設表示。Maadoranの確定訳を継承。表示名全体は未承認。 |
+| Maadoran Inn | マードランの宿屋 | draft | ai_working_draft | contextual | マップ施設表示。Maadoranの確定訳を継承。表示名全体は未承認。 |

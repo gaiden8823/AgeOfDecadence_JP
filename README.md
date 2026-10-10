@@ -1,5 +1,9 @@
 # The Age of Decadence 日本語化作業
 
+## 2026-10-10 の最新検証構成
+
+最新修正は `addon_validation` の混合方式で検証しています。更新内容・確認範囲・制限は [更新記録](guides/UPDATE_20261010.md) を参照してください。表示コードは `tools/runtime_modules/`、配布候補作成・導入・復元の手順は [配布手順](tools/release/README_ja.md) に保存しています。ゲーム本体・画像素材・配布ZIP・フォントはGitHubに含めません。旧ビルドの再適用による表示修正の巻き戻りに注意してください。
+
 作業ルート：`C:\GameModding\AgeOfDecadence_JP`。更新日：2026-10-08。
 
 ## 普段使うもの

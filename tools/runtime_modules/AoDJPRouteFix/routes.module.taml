@@ -1,0 +1,1 @@
+<ModuleDefinition ModuleId="AoDJPRouteFix" Enabled="1" Group="AodMods" VersionId="1" ScriptFile="main.cs" CreateFunction="create" DestroyFunction="destroy"/>
