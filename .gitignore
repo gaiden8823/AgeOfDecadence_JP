@@ -38,6 +38,9 @@
 /tools/release/*
 !/tools/release/*.py
 !/tools/release/*.md
+!/tools/release/installer.ps1
+!/tools/release/日本語化.cmd
+!/tools/release/導入手順.txt
 !/guides/*.md
 !/guides/audit_20261010/
 /guides/audit_20261010/*

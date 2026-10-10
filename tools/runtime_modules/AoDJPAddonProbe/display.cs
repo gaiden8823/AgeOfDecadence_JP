@@ -102,5 +102,5 @@ function AoDJPAddonProbe_replaceBitmap(%control) {
 }
 function AoDJPAddonProbe_registerVisibleName() {
    for (%i = 0; %i < 32; %i++)
-      if ($localizationLanguages[%i] $= "english") $localizationVisibleNames[%i] = "日本語（検証用）";
+      if ($localizationLanguages[%i] $= "english") $localizationVisibleNames[%i] = "English - Official";
 }
