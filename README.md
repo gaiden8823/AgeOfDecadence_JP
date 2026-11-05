@@ -2,6 +2,15 @@
 
 The Age of Decadence 日本語化MOD。本文・UI・画像内の文字を日本語化。CMD形式の導入ツール付き、Python不要。フォント差し替え対応。
 
+## 2026-11-05: CMD起動修正の状況
+
+Windows標準のZIP展開で `installer.ps1` が署名エラーになる事例を確認しています。
+修正版の [`日本語化.cmd`](tools/release/日本語化.cmd) をリポジトリに反映しましたが、**下記の既存Release ZIPにはまだ含まれていません**。
+現在公開中の配布ZIPを使用する場合は、配布元を確認したうえでZIPファイルのプロパティから「許可する」を選び、展開し直してください。
+修正版はPowerShellを起動する当該プロセスに限り `-ExecutionPolicy Bypass` を指定します。Windows全体の実行ポリシーは変更しませんが、そのプロセスの実行制限は緩和されます。
+
+**既知の問題：** ゲーム内で日本語を選択すると、ワールドマップ上のテロンやアウレリアン前哨地が表示されなくなる報告があります。原因は未特定で、CMD修正によって解決するものではありません。
+
 ## ダウンロード
 
 [リリースページ](https://github.com/gaiden8823/AgeOfDecadence_JP/releases/tag/v2026.10.10)の添付ファイル `AgeOfDecadence_JP_20261015_ja_spacing.zip` をダウンロードしてください。
